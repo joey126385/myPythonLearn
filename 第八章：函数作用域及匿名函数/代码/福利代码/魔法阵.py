@@ -13,7 +13,7 @@ window电脑安装步骤：
 
 file= '爱立刻有.mp3'
 pygame.mixer.init()
-pygame.mixer.music.load(file)
+pygame.mixer.music.load('python基礎學習\第八章：函数作用域及匿名函数\代码\福利代码\爱立刻有.mp3')
 pygame.mixer.music.set_volume(0.2)
 pygame.mixer.music.play()
 
@@ -500,3 +500,4 @@ def run():
         draw()
     t.done()
 
+run();

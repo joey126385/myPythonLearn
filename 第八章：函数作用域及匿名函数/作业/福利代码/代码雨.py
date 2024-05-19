@@ -25,7 +25,7 @@ def code_rain():
     screen = pygame.display.set_mode((init_width, init_height))
 
     # 字体
-    font = pygame.font.Font('字体.ttf', font_size)
+    font = pygame.font.Font('python基礎學習\第八章：函数作用域及匿名函数\作业\福利代码\字体.ttf', font_size)
 
     # 创建一个图像对象
     bg_suface = pygame.Surface((init_width, init_height), flags=pygame.SRCALPHA)
