@@ -94,6 +94,8 @@ def B_f2():
 a=B_f1(B_f2)()
 print(a)
 print("----")
+
+# 裝飾器
 @B_f1
 def B_f3():
     print("sleeping  333")
