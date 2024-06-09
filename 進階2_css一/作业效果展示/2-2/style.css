@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button {
+    border: none;
+}
+
+.site-name{
+    color: #333333;
+    font-size: 20px; 
+    position: absolute;  
+    left: 0; 
+}
+
+.navigation li{
+    display: inline;
+    padding: 0 15px;
+}
+
+.navigation li a{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.navigation li a:hover{
+    color: #41c0f1;
+
+}
+
+.navigation li a.active{
+    color: #41c0f1;
+}
+
+.login-button{
+    position: absolute;
+    right: 0;
+    font-weight: bold;
+    color: #41c0f1;
+    background-color: #ffffff;
+    border-radius: 30px;
+    padding: 12px 36px;
+    border: none;
+    box-shadow: 0 0 10px #e7e7e7;
+}
+
+.container{
+    position: relative;
+    width: 1350px;
+    height: 90px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 130px;
+}
+
+.banner h1 {
+    color: #fc09bf;
+    font-family: 楷体;
+    background-color: rgba(74, 196, 243, 0.2);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.banner h4 {
+    font-family: 楷体;
+    font-size: 20px;
+    margin-bottom: 20px;
+    letter-spacing: 5px;
+    background-color: rgb(246, 255, 124);
+    border-radius: 5px;
+}
+
+.banner h3 {
+    font-size: 50px;
+    font-family: 楷体;
+    color: #5ff840;
+    letter-spacing: 25px;
+}
+
+.banner button{
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 40px;
+    background-color: #41c0f1;
+    color: #ffffff;
+    padding: 12px 36px;
+    margin-top: 100px;
+    
+}
+
+.banner .banner-left{
+    position:absolute;
+    left: 200px;
+    bottom: 20px;
+    width: 400px;
+}
+
+.banner .banner-right{
+    position:absolute;
+    right: 200px;
+    bottom: 20px;
+    width: 400px;
+}
+
+.注册 {
+    margin-top: 80px;
+    background-color: #a3d9ee;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.注册 h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: #f39cd6;
+    margin-bottom: 30px;
+    font-family: 楷体;
+}
+
+.注册 input{
+    margin: 0 7px;
+    border-radius: 15px;
+    width: 180px;
+    padding: 14px 20px;
+    border: none;
+}
+
+.注册 button{
+    font-size: 20px;
+    font-family: 楷体;
+    
+    margin: 0 7px;
+    background-color: #156405;
+    font-weight: bold;
+    color: #faf8f8;
+    padding: 10px 30px;
+    border-radius: 15px;
+}

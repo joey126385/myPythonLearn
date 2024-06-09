@@ -1,0 +1,9 @@
+/*
+某些情况下代码量比较多的时候，为了更好的管理css代码，
+我们可以讲css代码挪到一个单独的css文件中，在html中可以通过引入该文件去使用。
+*/
+.ww{
+    color:crimson;
+    background-color: aqua;
+    font-family: 宋体;
+}

@@ -1,0 +1,129 @@
+<!-- 文档类型声明 -->
+<!DOCTYPE html>
+<!-- 告诉浏览器整个文档的内容是用英语编写的。这有助于浏览器更好地理解和处理文档内容。-->
+<html lang="en">
+
+	<!-- head包裹的称为头部区域 -->
+	<head>
+		<meta charset="UTF-8">
+		<title>html学习</title>
+	</head>
+
+	<!-- body包裹的称为内容区域 -->
+	<body>
+		<!-- 标题标签 -->
+		<h1>一级标题</h1>
+		<h2>二级标题</h2>
+		<h3>三级标题</h3>
+		<h4>四级标题</h4>
+		<h5>五级标题</h5>
+		<h6>六级标题</h6>
+
+		<!-- p段落标签、b加粗标签、em倾斜标签、br换行标签 -->
+		<p>
+			HTML 是用来描述网页的一种语言。
+			<br>
+			<b>HTML 是一种在 Web 上使用的通用标记语言。</b>
+			<br>
+			<em>
+				HTML 允许你格式化文本，添加图片，创建链接、输入表单、框架和表格等等，并可将之存为文本文件，
+				<b>浏览器即可读取和显示。</b>
+			</em>
+		</p>
+
+		<!-- hr分割线标签 -->
+		<hr>
+
+		<!-- div块级标签(本身没有任何的效果)、span行级标签(本身没有任何的效果) -->
+		<div>我是一个div</div>
+		<div>我是二个div</div>
+		<!-- 块级标签的特点是会自动换行 -->
+		<span>我是一个span</span>
+		<span>我是二个span</span>
+		<!-- 行级标签的特点是不会自动换行 -->
+
+		<br>
+		<!-- img图片标签、a超链接标签 -->
+		<img src="./壁纸.webp" alt="图片丢失了，请联系管理员" width="1800px" height="800px">
+		<br>
+		<a href="https://www.bilibili.com/" target="_blank">点我</a>
+
+		<!-- 标签可以结合使用 -->
+		<a href="https://www.runoob.com/html/html-tutorial.html" target="_blank">
+			<img src="https://www.runoob.com/wp-content/uploads/2013/06/image-icon.png">
+		</a>
+		<!-- ul li无序列表、ol li有序列表 -->
+		<ul>
+			<li>歌单1</li>
+			<li>歌单2</li>
+			<li>歌单3</li>
+			<li>歌单4</li>
+			<li>歌单5</li>
+		</ul>
+
+		<ol>
+			<li>歌单1</li>
+			<li>歌单2</li>
+			<li>歌单3</li>
+			<li>歌单4</li>
+			<li>歌单5</li>
+		</ol>
+
+		<hr>
+		<!-- input表单标签【文本输入框、密码输入框、邮箱输入框、单选框、复选框、按钮】
+            text：文本输入字段，用于输入纯文本内容。
+            password：密码输入字段，输入的内容会被隐藏，通常以圆点或星号显示。
+            email：电子邮件地址输入字段，用于输入符合电子邮件格式的邮箱地址。
+            date：日期输入字段，用于选择或输入日期。
+        -->
+		<input type="text" placeholder="请输入你的账号">
+		<input type="password" placeholder="请输入你的密码">
+		<input type="email" placeholder="请输入你的邮箱">
+		<input type="date" placeholder="请选择日期">
+		<!--
+            checkbox：复选框，用于选择多个选项。
+            radio：单选按钮，用于选择单个选项。
+            注意：使用单选框和复选框的，记得一定要为单选框或者复选框绑定组织，不然每个选项都会是独立的。
+            只要是name的值是一致的，他们就属于同一个组织。
+        -->
+		<h1>请问，以下哪些内容属于前端？</h1>
+		<input type="checkbox" name="第一题">
+		<span>A.html</span>
+		<input type="checkbox" name="第一题">
+		<span>B.css</span>
+		<input type="checkbox" name="第一题">
+		<span>C.js</span>
+		<input type="checkbox" name="第一题">
+		<span>D.mysql</span>
+
+		<h1>请问，我们的上课暗号是？</h1>
+		<input type="radio" name="第二题">
+		<span>A.1024</span>
+		<input type="radio" name="第二题">
+		<span>B.2048</span>
+		<input type="radio" name="第二题">
+		<span>C.4096</span>
+
+		<!--
+            file：文件上传字段（按钮），用于选择上传文件。
+            submit：提交按钮，用于提交表单数据。
+            reset：重置按钮，用于将表单字段重置为默认值。
+            button：普通按钮，用于执行自定义的JavaScript操作。
+        -->
+		<br>
+		<hr>
+		<input type="file">
+		<input type="submit">
+		<input type="reset">
+		<input type="button" value="点我">
+
+
+		<!-- 下面代码是下节课会讲解的，本节课可以先忽略 -->
+		<div style="height:1000px;background-color:pink;"></div>
+
+	</body>
+
+</html>
+
+<!-- html中所有的代码要么是平级要么是嵌套关系 -->
+<!-- html标签大部分都已成对出现,但是也有特殊情况，大家在写代码之前建议查阅笔记文档，去检查他是单标签还是双标签。-->

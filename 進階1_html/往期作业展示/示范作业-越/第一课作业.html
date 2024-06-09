@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>html_study</title>
+    <style>
+        span {
+            color: green;
+            font-weight: bold;
+        }
+
+        nav {
+            height: 200px;
+            width: 150px;
+            float: left;
+        }
+
+        section {
+            width: 600px;
+            height: 150px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        hr {
+            clear: both;
+        }
+
+        div.box1 {
+            width: auto;
+            height: 50px;
+            background: #F4F8EB;
+            border-style: solid;
+            border-width: 1px;
+            padding: 7px;
+
+        }
+
+        div.box2 {
+            width: auto;
+            height: 50px;
+            background: #F9F9F9;
+            border-style: solid;
+            border-width: 1px;
+
+        }
+        div.box3 {
+            width: auto;
+            height: 350px;
+            background: #F4F8EB;
+            border-style: solid;
+            border-width: 1px;
+            padding: 7px;
+
+        }
+        div.box4 {
+            width: auto;
+            height: 350px;
+            background: #F9F9F9; 
+            border-style: solid;
+            border-width: 1px;
+
+        }
+        div.box5 {
+            width: 98%;
+            background-color: #F3F7F0;
+            height: 50px;
+            margin-top: 7px;
+            margin-left: 8px;
+            display:flex;
+        }
+        text.text1 {
+            color: rgba(136, 133, 130, 0.48);
+
+        }
+
+        text.text2 {
+            color: rgb(46, 46, 241);
+        }
+        
+    </style>
+<!-- <link href="https://cdn.bootcss.com/highlight.js/9.12.0/styles/atom-one-dark.min.css" rel="stylesheet">
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script >hljs.initHighlightingOnLoad();</script>  -->
+</head>
+
+<body>
+    <h1>HTML5 <span>简介</span> </h1>
+    <div>
+        <nav>
+            <img src="pic_html5.gif" alt="h5图标" width="150" height="180">
+        </nav>
+        <section>
+            <p>
+                HTML5是最新的修订版本，2014年10月由万维网联盟（W3C）完成标准制定。<br>
+                HTML5的设计目的是为了在移动设备上支持多媒体。<br>
+                HTML5简单易学。
+            </p>
+        </section>
+    </div>
+    <hr>
+    <div>
+        <h1>什么是HTML5</h1>
+        <p>
+            HTML5是下一代HTML标准。
+            HTML，HTML 4.0.1的上一个版本诞生于1999年。自从那以后，Web世界已经经历了巨变。<br>
+            HTML5仍处于完善之中，然而，大部分浏览器已经具备了某些HTML5支持。<br>
+        </p>
+        <hr>
+        <h1>HTML5是如何起步的？</h1>
+        <p>
+            HTML5是W3C与WHATWG合作的结果。WHATWG指Web Hypertext Application Technology Working Group. <br>
+            WHATWG致力于web表单和应用程序，而W3C专注于XHTML2.0. 在2006年，双方决定进行合作，来创建一个新版本的HTML。<br>
+            HTML5中的一些有趣的新特性：<br>
+        <ul>
+            <li>用于绘画的canvas元素</li>
+            <li>用于媒介回放的video和audio元素</li>
+            <li>对本地高线存储的更好的支持</li>
+            <li>新的特殊内容元素。比如 article、footer、header、nav、section</li>
+            <li>新的表单控件。比如 calendar、date、time、email、url、search</li>
+        </ul>
+        </p>
+        <hr>
+        <h1>HTML5 &lt;!DOCTYPE&gt;</h1>
+        <p>&lt;!DOCTYPE&gt;声明必须位于HTML5文档的第一行，特别简单:</p>
+        <div class="box1">
+            <div class="box2">
+                <div style="margin-top: 7px;margin-left: 8px;">
+                    <!-- <text class="text1">&lt; !</text>
+                    <text class="text2">DOCTYPE html</text>
+                    <text class="text1">&gt;</text> -->
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt; !</span><span style="color: blue;"> DOCTYPE html </span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <h1>最小的HTML5文档</h1>
+        <p>下面是一个简单的HTML5文档：</p>
+        <div class="box3">
+            <div class="box4">
+                <div style="margin-top: 7px;margin-left: 8px;">
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt; !</span><span style="color: blue;"> DOCTYPE html  </span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt; </span><span style="color: green;">html</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt; </span><span style="color: green;">head</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt; </span><span style="color: green;">mete</span>
+                    <span style="color: blue;">charset</span><span style="color: rgba(136, 133, 130, 0.48);">=</span><span style="color: red;">"utf-8"</span>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt; </span><span style="color: green;">title</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span>
+                    <span style="color: rgba(136, 133, 130, 0.48);;">文档标题</span>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt;/</span><span style="color: green;">title</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt;/</span><span style="color: green;">head</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt; </span><span style="color: green;">body</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <span style="color: rgba(136, 133, 130, 0.48);;"> 文档内容......  </span>
+                    <br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt;/</span><span style="color: green;">body</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>
+                    <br>
+                    <span style="color:rgba(136, 133, 130, 0.48);">&lt;/</span><span style="color: green;">html</span><span style="color:rgba(136, 133, 130, 0.48);">&gt; </span><br>             
+                </div>
+            </div>
+        </div>
+        <div class="box5">
+            <div style="display:flex;align-items:center;margin-left: 15px;"><strong>注意：</strong><em>对于中文网页需要使用 &lt;meta charset=&quot;UTF-8&quot; &gt;声明编码，否则会出现乱码。</em></div>
+            <!-- <b>注意：</b><em>对于中文网页需要使用</em> &lt;meta charset=&quot;UTF-8&quot; &gt;声明编码，否则会出现乱码。 -->
+        </div>
+
+    </div> 
+
+</body>

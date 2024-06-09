@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css样式书写及选择器使用</title>
+    <link rel="stylesheet" href="./外部样式案例.css">
+    <style>
+        /* css代码写在style标签中 */
+        /* 选择器：用于准确的选中元素，并赋予样式。（用于将css与指定的html代码绑定的）
+
+                1、元素选择器：在css代码中，通过标签名字去确定绑定的css代码。（绑定整个网页中符合条件的代码）
+                2、class选择器：通过类名将某一段css代码与htm标签进行绑定
+                3、id选择器：通过id编号将某段css代码与html进行绑定（一个id只会绑定一个html）
+
+                以上三种选择器的精确范围不同，权重也不同。
+                id > class > 元素
+            */
+        p {
+            /*在style中写上 p{} 之后，浏览器在加载这个一个网页的时候会自动将p{}括号中的css与网页中的p标签进行绑定*/
+            color: purple;
+        }
+
+        .nn {
+            /*类选择器，只要是整个网页源码中，有便签设置了类为nn,都可以绑定到这段css样式设置*/
+            font-family: 楷体;
+            font-weight: bold;
+            color: greenyellow;
+        }
+
+        #x01 {
+            /*id选择器，最精确的选择器，一般正规的写法是一个id名只能绑定一个html代码 */
+            text-decoration: underline;
+            color: blue;
+        }
+
+        .ww {
+            color:chartreuse;
+            background-color:cadetblue;
+            font-family: 宋体;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- css样式书写有三个位置： 行内样式（书写在html标签中）、内部样式（书写在head标签中）、外部样式（书写在外部css文件中） 
+            注意：某些情况下，行内样式会与内部样式或者外部样式产生冲突，这个情况下谁的css离html代码近就听谁的。
+            -- 总结： 行内样式 > 内部样式 = 外部样式
+        -->
+    <!-- 行内样式案例（书写在html标签中） -->
+    <p style="color: deeppink;">行内样式案例（书写在html标签中）</p>
+    <!-- 离代码越近，就听谁的-->
+
+
+    <!-- 内部样式案例（书写在head标签中） -->
+    <p>内部样式案例1（书写在head标签中）</p>
+    <p class="nn" id="x01">内部样式案例2（书写在head标签中）</p>
+    <p class="nn">内部样式案例3（书写在head标签中）</p>
+
+    <!-- 外部样式案例（书写在外部css文件中） -->
+    <p class="ww">外部样式案例1（书写在外部css文件中）</p>
+    <p class="ww">外部样式案例2（书写在外部css文件中）</p>
+    <p class="ww">外部样式案例3（书写在外部css文件中）</p>
+</body>
+
+</html>

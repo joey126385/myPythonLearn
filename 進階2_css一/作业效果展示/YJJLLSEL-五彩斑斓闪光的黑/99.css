@@ -1,0 +1,317 @@
+/* 多选择是为了控制不同时长 */
+#font4 {
+    font-size: 120px;
+    font-weight: 800;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.1s linear infinite;
+}
+
+#font2 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 666;
+    font-size: 36px;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.2s linear infinite;
+}
+
+#font3 {
+
+    text-align: center;
+    line-height: 42px;
+    font-weight: 666;
+    font-size: 36px;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.3s linear infinite;
+}
+
+#font5 {
+    text-align: center;
+    line-height: 42px;
+    font-weight: 666;
+    font-size: 36px;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.4s linear infinite;
+}
+
+#font6 {
+    text-align: center;
+    line-height: 42px;
+    font-weight: 666;
+    font-size: 36px;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.5s linear infinite;
+}
+
+#font7 {
+    font-family:楷体 ;
+    text-align: center;
+    line-height: 42px;
+    font-weight: 1000;
+    font-size: 36px;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.6s linear infinite;
+}
+
+#font8 {
+    text-align: center;
+    line-height: 42px;
+    font-weight: 666;
+    font-size: 36px;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.7s linear infinite;
+}
+
+#font9 {
+    text-align: center;
+    line-height: 42px;
+    font-weight: 666;
+    font-size: 36px;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.8s linear infinite;
+}
+
+#font10 {
+    text-align: center;
+    line-height: 36px;
+    font-weight: 888;
+    font-size: 22px;
+    text-decoration: underline;
+    background-image:
+        -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+            color-stop(0.15, #f2f),
+            color-stop(0.3, #22f),
+            color-stop(0.45, #2ff),
+            color-stop(0.6, #2f2),
+            color-stop(0.75, #2f2),
+            color-stop(0.9, #ff2),
+            color-stop(1, #f22));
+    color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 0.1s linear infinite;
+}
+
+#ddd{
+    font-size: 44px;
+    font-weight: 800;
+    /* color: brown; */
+
+    text-decoration: underline;
+    
+    /* 自定义--c属性，通过var函数调用 */
+    --c:lightseagreen;
+    /* 调用自定义属性--c， 设置文字阴影（发光效果）*/
+    text-shadow: 0 0 10px var(--c),
+
+        0 0 20px var(--c),
+        0 0 40px var(--c),
+        0 0 80px var(--c),
+        0 0 160px var(--c);
+    /* 执行动画：动画名 时长 线性的 无限次数 */
+    animation: animate 1.3s linear infinite;
+}
+/* 定义动画 */
+@keyframes animate{
+    to{
+        /* 色相旋转滤镜（设置度数可改变颜色） */
+        filter: hue-rotate(360deg);
+    }
+}

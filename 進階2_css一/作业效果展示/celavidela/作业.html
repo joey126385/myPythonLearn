@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS（一）作业</title>
+    <style>
+        body{
+            background-image: url('./图片1.png') ;
+            background-size: cover;
+        }
+        #box1{
+            margin-top: 700px;
+            margin-left: 200px;
+            margin-bottom: 300px;
+            margin-right:200px;
+            padding: 100px;
+            text-align: center;
+            font-size:200px;
+            font-family:STXingkai;
+        }
+
+        #box2{
+             text-align: center;
+             font-size:900px;
+             font-family:STXingkai;
+        }
+        #box3{
+            text-align: center;
+            font-size:300px;
+            font-family:STXinwei;
+            text-decoration: underline;
+        }
+
+        #box4{
+            margin-left: 200px;
+            margin-bottom: 300px;
+            margin-right:200px;
+            padding: 100px;
+            text-align: center;
+            font-size:200px;
+        }
+        #box5{
+            margin-left: 200px;
+            margin-bottom: 300px;
+            margin-right:200px;
+            padding: 100px;
+            text-align: center;
+            font-size:200px;
+        }
+        #box6{
+            margin-left: 200px;
+            margin-bottom: 300px;
+            margin-right:200px;
+            padding: 100px;
+            text-align: center;
+            font-size:200px;
+        }
+        .blink{  
+    	color:#f7f2f2d4; 
+    	animation: changeshadow 1s  ease-in  infinite ;
+    	/* 其它浏览器兼容性前缀 */
+	    -webkit-animation: changeshadow 1s linear infinite;
+	    -moz-animation: changeshadow 1s linear infinite;
+	    -ms-animation: changeshadow 1s linear infinite;
+	    -o-animation: changeshadow 1s linear infinite;
+    }  
+    @keyframes changeshadow {  
+        0%{ text-shadow: 0 0 4px #98a595}  
+        50%{ text-shadow: 0 0 40px #98a595}  
+        100%{ text-shadow: 0 0 4px #98a595}  
+    }
+    /* 添加兼容性前缀 */
+	@-webkit-keyframes changeshadow {
+	  0%{ text-shadow: 0 0 4px #98a595}  
+          50%{ text-shadow: 0 0 40px#98a595}  
+          100%{ text-shadow: 0 0 4px #98a595}  
+	}
+	@-moz-keyframes changeshadow {
+	    0%{ text-shadow: 0 0 4px #98a595}  
+            50%{ text-shadow: 0 0 40px #98a595}  
+            100%{ text-shadow: 0 0 4px #98a595}  
+	}
+	@-ms-keyframes changeshadow {
+	    0%{ text-shadow: 0 0 4px #98a595}  
+            50%{ text-shadow: 0 0 40px#98a595}  
+            100%{ text-shadow: 0 0 4px#98a595}  
+	}
+	@-o-keyframes changeshadow {
+	    0%{ text-shadow: 0 0 4px #98a595}  
+            50%{ text-shadow: 0 0 40px #98a595}  
+            100%{ text-shadow: 0 0 4px#98a595}  
+	}
+
+    </style>
+
+</head>
+<body>
+    <div class="blink" id="box2">
+        戒码
+    </div>
+    <div class="blink" id="box3">
+        致广大青年
+    </div>
+    <div>
+        <input
+            id="box4";
+            type="text"
+            placeholder="用户名"
+        />
+        <input
+            id="box5";
+            type="password"
+            placeholder="密码"
+        />
+        <button id="box6"; 200px;type="submit">登录</button>
+
+ 
+    </div>
+        
+    <div class="blink" id="box1">
+        若要戒码很简单，一念不动即过关；勿思新奇清心乱，便是逍遥自在仙。<br>
+        码是浮云百宝妆，贪恋程序不久长；董卓贪码长安死，吕布贪码下沛亡。<br>
+        纣王贪码江山失，幽王宠码把命丧；世人都把编码爱，袖里藏刀暗损伤。<br>
+        码不醉人人自醉，码不迷人人自迷；码盗人精是削肉，要知精血量有限。<br>
+        只图片刻之欢乐，不知肾衰骨髓枯；无节码欲催命符，人虽未老身已残。<br>
+        青年无知患码瘾，血气未定身已损；洁白之驱鬼相随，葬身欲海不自知。<br>
+        奉劝世人早自省，编码一事深戒之；道德善书常阅读，百病顿消健似仙。<br>
+        码盗人精竭者死，要知精力有限时；不节码欲定夭折，人虽未老身先衰。
+    </div>
+    
+</body>
+</html>

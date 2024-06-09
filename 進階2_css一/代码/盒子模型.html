@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style>
+        #box {
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            margin: 100px 200px;
+            padding: 10px 20px 30px 40px;
+            border-radius: 50%;
+            border-style: solid;
+        }
+
+        #box2 {
+            background-color: palevioletred;
+            width: 300px;
+            height: 300px;
+        }
+
+        .input {
+            margin: 5px 0px 0px 30px;
+            width: 200px;
+            height: 30px;
+            border-radius: 5%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 盒子模型：我们可以将网页中的任何标签看作是一个盒子。
+        既然是盒子，那就具备盒子属性，可以对该盒子内容、内边距、边框、外边距进行设置 
+        注意：在html中任何标签都可以看做是一个盒子
+    -->
+    <div id="box">这是一个盒子</div>
+    <div id="box2">
+        <span>姓名:</span><input class="input" type="text" placeholder="请输入你的姓名：">
+        <br>
+        <span>年龄:</span><input class="input" type="password" placeholder="请输入你的姓名：">
+    </div>
+</body>
+
+</html>

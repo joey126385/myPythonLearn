@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+#d1{
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 20px;
+	height: 1px;
+}
+#d2{
+	position: relative;
+	left: 150px;
+	top: 0px;
+	width: 700px;
+	height: 115px;
+}
+.lizi{
+	border-style:solid;
+	border-width:5px;
+	border-color: rgba(229,238,204);
+}
+/* .lizi_code{
+	border-style:solid;
+		border-width:medium;
+	border-color:#98bf21;
+} */
+/* ul{
+	list-style: none;
+	counter-reset: count;
+}
+li::before{
+	content: "";
+	color: gray;
+	
+} */
+ul li::marker{
+            color: gray;
+        }
+.c3{
+	color: gray;
+}
+.c5{
+	color: green;
+}
+.c4{
+	color:darkblue;
+}
+.c6{
+	color: red;
+}

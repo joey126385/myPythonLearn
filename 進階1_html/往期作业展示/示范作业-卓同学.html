@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .float-left{
+            float: left;
+            margin-right: 20px; /* 根据需要设置右边距 */
+
+            }
+        body{
+            font-size:13px;
+            line-height:2.0;
+            color:#000000;
+            font-family: Helvetica Neue, Helvetica, PingFang SC, Hiragino Sans GB, Microsoft YaHei, Noto Sans CJK SC, WenQuanYi Micro Hei, Arial, sans-serif;;
+        }
+        h2{
+            line-height:0.5;
+        }
+        hr{
+            line-height:0.5;
+        }
+        .pre{
+            color:#333333;
+            font-size:10px
+            background-color: #F1F1F1 ;
+            background-color: rgb(251, 251, 251);
+            margin:15px 0px;
+            padding:5px 15px;
+            border:1px solid #ddd;
+            border-left-width:4px;
+        }
+        .hezi{
+            background-color: white;
+            color:#000
+        }
+        div{
+            display:block;
+            }
+        div.example{
+            width:98%;
+            color:#000;
+            background-color: #f6f4f0;
+            background-color: #d0e69c;
+            background-color: #dcecb5;
+            background-color: #e5eecc;
+            margin: 0 0 5px 0;
+            padding: 5px;
+            border: 1px solid #d4d4d4;
+            background-image: -webkit-linear-gradient(#fff, #e5eecc 100px);
+            background-image: linear-gradient(#fff, #e5eecc 100px);
+        }
+
+        
+        button{
+            color:#FFFFFF;
+            background:#8AC007;
+            font-size:12px;
+            border-radius: 5px;
+            border: 1px solid #eac159;
+            padding: 5px 10px;
+            font-weight: bold;
+        }
+        button:hover{
+            background-color: #FFFFFF;
+            color: #8AC007;
+        }
+        .zi{
+            color: #060;
+            outline: none;
+            text-decoration:underline;
+        }
+    </style>
+    <title>网页作业</title>
+</head>
+<body>
+    <h2>Python 3 教程</h2>
+    <div class="container" ">
+        <img class="float-left" src="http://it028.com/python3.png" alt="python3" width="150" height="91">
+        <p>
+            Python 的 3.0 版本，常被称为 Python 3000，或简称 Py3k。相对于 Python 的早期版本，这是一个较大的升级。为了不带入过多的累赘，Python 3.0 在设计的时候没有考虑向下兼容。
+            <br>Python 介绍及安装教程我们在<span class="zi">Python 2.X 版本的教程</span>中已有介绍，这里就不再赘述。
+            <br><span class="zi">你也可以点击 Python2.x与3.x版本区别</span> 来查看两者的不同。
+            <br>本教程主要针对 Python 3.x 版本的学习，如果你使用的是 Python 2.x 版本请移步至 <span class="zi">Python 2.X 版本的教程</span>。
+            <br><strong>官方宣布，2020 年 1 月 1 日， 停止 Python 2 的更新。</strong>
+        </p>
+    </div>
+    <hr>
+    <h2>查看 Python 版本</h2>
+    <div>
+        <p>
+            我们可以在命令窗口(Windows 使用 win+R 调出 cmd 运行框)使用以下命令查看我们使用的 Python 版本：
+        </p>
+        <div class="pre">
+            <div class="hezi">python -V</div>
+        </div>
+        <p>
+            以上命令执行结果如下：
+        </p>
+        <div class="pre">
+            <div class="hezi"><span style="color:#606">Python</span> <span style="color:#066">3.3.2</span></div>
+        </div>
+        <p>
+            你也可以进入Python的交互式编程模式，查看版本：
+        </p>
+        <div class="pre">
+            <div class="hezi">
+                <span style="color:#606">Python</span>
+                <span style="color:#066">3.3.2</span>
+                  (v3.
+                <span style="color:#066">3.2</span>
+                :d047928ae3f6,
+                <span style="color:#606">May</span>
+                <span style="color:#066">16 2013, 00:03:43</span>
+                ) [MSC v.
+                <span style="color:#066">1600 32</span>
+                bit (
+                <span style="color:#606">Intel</span>
+                )] on win32
+                <br>
+                <span style="color:#606">Type</span>
+                <span style="color:#080">"copyright", "credits"</span>
+                <span style="color:#008">or</span>
+                <span style="color:#080">"license()" </span>
+                <span style="color:#008">for </span>
+                more information.
+                <br>
+                <span style="color:#660">>>> </span>
+            </div>
+            </div>
+        </div>
+            <hr>
+            <h2>第一个Python3.x程序</h2>
+            <div>
+                <p>
+                    对于大多数程序语言，第一个入门编程代码便是"Hello World！"，以下代码为使用Python输出"Hello World！"：
+                </p>
+                <div class="example">
+                    <h3 ><span style="color: #617f10;">实例(Python 3.0+)</span></h3>
+                     <div class="hezi" style="border: 1px solid #d4d4d4;">
+                         <span style="color:#AA5500;margin-left:5px">#!/usr/bin/python3</span>
+                         <br >
+                         <span style="color:#0055AA;margin-left:5px;line-height: 3.5;">print</span>
+                         <span style="color:#AA1111;margin-left:5px">("Hello, World!")</span>
+                     </div>
+                    <div>
+                        <button style="margin:15px 0px 5px 10px;">运行实例 »</button>
+                    </div>
+                </div>
+                <p>
+                    你可以将以上代码保存在 hello.py 文件中并使用 python 命令执行该脚本文件。
+                </p>
+                <div class="pre">
+                    <div class="hezi">$ python3 hello.py</div>
+                </div>
+                <p>
+                    以上命令输出结果为：
+                </p>
+                <div class="pre">
+                    <div class="hezi"><span style="color:#606">Hello, World!</span>
+                </div>
+            </div>
+
+
+</body>
+</html>     

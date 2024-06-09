@@ -1,0 +1,19 @@
+/* 外部样式的css代码 */
+
+h1{
+    /* 元素选择器 */
+    color: purple;    /*设置字体颜色*/
+    font-family:楷体;      /*设置字体类型*/
+}
+
+.hh1{
+    /* 类选择器 */
+    color:brown;    /*设置字体颜色*/
+}
+
+
+#hh2{
+    /* id选择器 */
+    color:deeppink;    /*设置字体颜色*/
+    font-family:黑体;      /*设置字体类型*/
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+</html>
+
+<head>
+    <meta charset="utf-8">
+    <title> 学习css</title><!-- 显示的标签 -->
+
+
+    <!-- 内部样式、外部样式（权重一样） -->
+    <style>
+        body {
+            background-image: url("./风景.jpg");
+            /* color: #471ea8c2; */
+            /* 设置背景图片 */
+
+        }
+
+        #font2 {
+            /* 权重最高 一 一对应 # id选择器标识符号*/
+            color: #1c0d70;
+            font-family: 楷体;
+            text-align: center;
+        }
+
+        .font3 {
+            /* 权重居中 一个class对应多个标签*/
+            /* color: #680a4c; */
+            text-align: center;
+        }
+
+        p {
+            /* 权重最低 标签名一样 无差别绑定*/
+            text-align: center;
+       
+            /* stop-color:(0.15,#f2f); */
+
+            /* text-decoration: underline; 下划线*/
+
+            width: 900px;
+            font-size: 20px;
+            background-image:
+                -webkit-gradient(linear, left top, right top, color-stop(0, #f22),
+                    color-stop(0.15, #f2f),
+                    color-stop(0.3, #22f),
+                    color-stop(0.45, #2ff),
+                    color-stop(0.6, #2f2),
+                    color-stop(0.75, #2f2),
+                    color-stop(0.9, #ff2),
+                    color-stop(1, #f22));
+            color: transparent;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -ms-background-clip: text
+                /*  */
+        }
+    </style>
+
+</head>
+<!--id选择器>class选择器>元素选择器-->
+<!-- 冲突样式比权重，没有冲突的样式合并-->
+
+<body>
+
+    <!-- 行内样式 （权重最高） -->
+    <p style=font-size:50px>游山西村</p><!-- 行内标签    font-size:150%;-->
+    <p id="font2">朝代：宋朝|作者：陆游</p>
+    <p style="text-align: center;">莫笑农家腊酒浑，丰年留客足鸡豚。</p>
+
+    <p class="font3"> 山重水复疑无路，柳暗花明又一村。</p>
+
+    <p> 箫鼓追随春社近，衣冠简朴古风存。</p>
+
+    <p> 从今若许闲乘月，拄杖无时夜叩门。</p>
+
+
+    <!-- <h1>今天天气好好！</h1>
+    <img src="./风景.jpg" alt="打开失败">插入图片 <img src="图片地址 alt="替换文本"> 
+    <a href="https://www.baidu.com">百度一下</a>- <a href="目标文本">链接文本</a> -
+    <input type="text" placeholder="采集文本">
+    <button>点击按钮</button> -->
+</body>
