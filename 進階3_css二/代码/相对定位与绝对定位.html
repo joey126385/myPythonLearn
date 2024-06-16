@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相对定位与绝对定位</title>
+    <style>
+        body{
+            background-color: plum;
+            /* 设置body的内外边距，去掉网页的边边 */
+            margin: 0px;
+            padding: 0px;
+        }
+        #box{
+            width: 500px;
+            height: 500px;
+            background-color: blueviolet;
+            margin: 500px;
+        }
+        #box1{
+            width: 80px;
+            height: 80px;
+            background-color: chartreuse;
+            position: relative;    /*设置当前div的定位方式为相对定位*/
+            top: 100px;
+            left: 100px;
+        }
+        /*
+            外边距设置可以达到类似于相对定位的效果。
+        */
+        #box2{
+            width: 80px;
+            height: 80px;
+            background-color:aqua;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+        相对定位  relative
+            特点：相对于自己身边的事物去进行定位,受外层包裹div或者旁边事务影响。
+        绝对定位  absolute
+            特点：相对于整个网页去进行定位，不受外层div影响，它已经脱离文档里流。
+    -->
+
+    <!-- 参照物 -->
+    <div id="box">
+        <!-- 演示相对定位的盒子 -->
+        <div id="box1">
+            <span>相对定位div</span>
+        </div>
+        <!-- 演示绝对定位的盒子 -->
+        <div id="box2">
+            <span>绝对定位div</span>
+        </div>
+    </div>
+</body>
+</html>

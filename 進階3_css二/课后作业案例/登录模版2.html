@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex布局实现div在页面居中效果</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #guding{
+            width: 100%;
+            height: 50px;
+            background-color: cadetblue;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            flex-direction : row-reverse ;
+        }
+        .guding_01{
+            width: 50px;
+            height: 50px;
+        }
+        #box1{
+            display: flex;      /* 声明flex容器 */
+            width: 100%;       /*设置宽度为屏幕的100%*/
+            height: 100vh;         /*设置可视化高度为当前浏览器高度*/
+            background-color: aquamarine;
+            justify-content: center;     /*让盒子相对于整个页面的x轴进居中*/
+            align-items: center;    /*让盒子相对于整个页面的y轴进居中*/
+        }
+        .box1_01{
+            /* background-color: gold; */
+            height: 500px;
+            width: 500px;
+        }
+        #xx{
+            background-image: url('https://rescdn.qqmail.com/zh_CN/htmledition/images/tg-mj1e9c5d.jpg');
+        }
+        /* 给登录页面的字体加样式 */
+        #title{
+            font-size: 30px;
+            font-family: 楷体;
+            margin-top: 20px;
+            margin-left: 200px;
+        }
+        /* 用户账户输入框 */
+        .input{
+            margin-left: 20px;
+            margin-top: 50px;
+            margin-left: 120px;
+        }
+        button{
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="guding">
+        <div class = "guding_01" style="background-color: black;">
+
+        </div>
+        <div class = "guding_01" style="background-color: white;">
+
+        </div>
+        <div class = "guding_01" style="width: 320px;">
+            <a href="https://gitee.com/login" style="font-size: 30px;color:white;">本页面灵感来源于gitee</a>
+        </div>
+        <div class = "guding_01" style="width: 320px;">
+            <a href="https://blog.csdn.net/shulianghan/article/details/129673250" style="font-size: 30px;color:yellow">拓展：如何实现阴影</a>
+        </div>
+        <div class = "guding_01" style="width: 360px;">
+            <a href="https://mail.qq.com/" style="font-size: 30px;color:green">QQ邮箱登录也是差不多的</a>
+        </div>
+    </div>
+    <!-- 1、创建flex父级盒子  flex容器 -->
+    <div id="box1">
+        <!-- 2、在 flex容器 中创建 Flex项目-->
+        <div  class="box1_01" id="xx">
+        </div>
+        <div  class="box1_01" style="border: 1px solid;    /*设置实体边框，边框宽度为1px*/">
+            <div id="title">登录界面</div>
+            <div class="input">
+                <span>账户:</span>
+                <input type="text" placeholder="请输入账号">
+            </div>
+            <div class="input">
+                <span>密码:</span>
+                <input type="password" placeholder="请输入密码">
+            </div>
+            <div class="input">
+                <span>邮箱:</span>
+                <input type="email" placeholder="请输入邮箱">
+            </div>
+            <div class="input">
+                <button>登录</button>
+            </div>
+            <div style="margin-left: 300px; margin-top: 20px;">
+                <a href="zhuce.html">点击调转注册界面</a>
+            </div>
+        </div>
+    </div>
+    <!-- 为什么 用flex布局？    因为能够让界面更加的灵活，不会受浏览器窗口的缩放所影响-->
+</body>
+</html>

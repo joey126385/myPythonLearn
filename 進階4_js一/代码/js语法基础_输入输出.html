@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>js语法基础1</title>
+    </head>
+
+    <body>
+
+        <script>
+            // 这是一个单行注释
+            /*
+                这是一个多行注释
+            */
+
+            // 1、控制台输出 hello world !    
+            console.log("hello world ! ")       // 常常用于程序测试，一般是给程序员看的
+            // 2、弹框输出 你好，世界！
+            // alert("你好，世界！")                // 可以给程序员看，也可以作为用户使用过程中的特殊提示
+
+            // 弹框输入  ----- 一般是给程序员用的
+            let name = prompt("请输入你的姓名：")
+
+            // console.log("你的姓名是:"+name)
+
+            // format 格式化 --- 本身的功能是拼接字符串和变量或者数据。通常在程序员进行输出的时候使用。
+            // js中格式化字符串语法： `字符串${变量/数据}`
+            // 反引符号： 找到字母键盘上面的数字键1,数字键1左边就是这个符号（注意必须是英文状态下输入才对）
+            console.log(`你的姓名是:${name}，你的密码是:${1024}`)
+
+
+        </script>
+
+    </body>
+
+</html>

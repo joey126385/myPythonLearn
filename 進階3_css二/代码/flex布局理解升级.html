@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>初识flex布局</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #box{
+            width: 100%;
+            height: 100vh;    /*100vh是屏幕可视化高度*/
+            background-color: blueviolet;
+            /* 设置为flex容器 */
+            display: flex ;
+            flex-direction : row;
+        }
+        #box1{
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+        }
+        #box2{
+            width: 800px;
+            height: 100px;
+            background-color:coral;
+        }
+        #box3{
+            width: 100px;
+            height: 100px;
+            background-color:yellow;
+        }
+        #box4{
+            width: 100px;
+            height: 100px;
+            background-color:green;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2009年，W3C提出了一种新的方案—-Flex布局，可以简便、完整、响应式地实现各种页面布局。 -->
+
+    <!-- 一、申明一个flex容器（建议用div） -->
+    <div id="box">
+        <!-- 二、写flex项目 -->
+        <div id="box1">
+            <img src="https://www.runoob.com/wp-content/uploads/2013/06/image-icon.png" width="100%" height="100%">
+        </div>
+        <div id="box2">
+            <p>
+                超文本标记语言（英语：HyperText Markup Language，简称：HTML）是一种用于创建网页的标准标记语言。</p>
+        </div>
+        <div id="box3">3</div>
+        <div id="box4">4</div>
+    </div>
+</body>
+</html>

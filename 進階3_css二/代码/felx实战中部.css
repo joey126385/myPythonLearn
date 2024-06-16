@@ -1,0 +1,27 @@
+#box2_center{
+    width: 800px;
+    height: 500px;
+    background-color: black;
+    /* 2、通 margin + flex 容器的快捷方式实现水平居中 */
+    margin: auto;
+    display: flex;
+}
+
+#box2_01{
+    /* background-color: cyan; */
+    flex: 3;
+    background-image: url("https://rescdn.qqmail.com/zh_CN/htmledition/images/tg-mj1e9c5d.jpg");
+    background-size: contain;
+}
+#box2_02{
+    background-color:plum;
+    flex: 2;
+    display: flex;
+}
+
+#d_z{  
+    background-color: antiquewhite;
+    margin: auto;
+    width: 90%;
+    height: 90%;
+}

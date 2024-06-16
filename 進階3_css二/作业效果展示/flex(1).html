@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+</head>
+  <style>
+     body{
+        margin: 0px;
+        padding: 0px;
+
+
+     }
+
+    #box0{
+     display: flex;
+     width: 100%;
+     height: 100vh;
+     background-image: url("https://yhsy-act-1253630048.file.myqcloud.com/uploads/444bf557f62e2af10a5ed6e4cbc76ef33577ca02.png");
+
+    }
+
+     #box1{
+        width: 600px;
+        height: 400px;
+        margin: auto;
+        background-color:azure;
+        display: flex;
+     }
+     .box1_1{
+        flex: 1;
+      
+     }
+     #libai{
+       width:300px;
+       height: 400px;
+     }
+     #denglu{
+        font-family: 楷体;
+        position: relative;
+        left: 20px;
+        text-align: center;
+               
+     }
+     #dise{
+        background-color: mintcream;
+        
+     }
+     #kuaijie{
+        font-family: 楷体;
+        text-align: center;
+
+     }
+     .input{
+        position: relative;
+        left: 10px;
+        top:30px;
+     }
+     #duanxin{
+        position: relative;
+        left: 45px;
+        font-size: 13px;
+        font-family: 楷体;
+     }
+     #anniu{
+       width: 100%;
+       height: 20px;
+      font-family: 宋体;
+      color:aliceblue;
+      background-color: cornflowerblue;
+      position: relative;
+      top:10px
+     }
+     #tongyi{
+        font-size: 12px;
+        font-family: 楷体;
+     }
+    #zhaohui{
+        font-size: 12px;
+        font-family: 宋体;
+    }
+    #qq{
+        width: 25px;
+        height: 25px;
+    }
+    #wx{
+        width: 25px;
+        height: 25px;
+        position: relative;
+        left: 10px;
+       
+    }
+    
+  </style>
+<body>
+    <div id="box0">
+        <div id="box1">
+            <div class="box1_1" >
+               <img src="https://i1.hdslb.com/bfs/archive/1b2e26d2cfe320f17c806e3e422c1f1cbd8829eb.png" id="libai">
+            
+            </div>
+
+            <div class="box1_1 " id="dise">
+             <div>
+                <h2 id="denglu">登录</h2>
+             </div>
+             <div>
+                <p id="kuaijie">推荐使用<a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&client_id=100495085&response_type=code&redirect_uri=https://music.163.com/back/qq&X-loginMethod=QQ&forcelogin=true&state=nzjNFdleAA&checkToken=9ca17ae2e6ffcda170e2e6ee9bee3cab8af88ad84a9c868aa2d55e928a9e83c173b89c899bd37bf2f084a8e42af0feaec3b92af7b7999ab14f87bec08ec85e839f9aa3d44b909aa7d9d649abf09ba2ee7b9390ee9e">快捷登录</a>,防止盗号</p>
+             </div>
+             <div class="input_">
+                <label for="zhanghao">账号：</label><input type="text"  value="请输入账号" name="zhanghao">
+             </div>
+             <br>
+             <div class="input_">
+              <label for="mima">密码:</label>  <input type="password" value="请输入密码" name="mima">
+             </div>
+             <div>
+                <input type="radio" >记住我
+                <span id="duanxin">短信验证登录  </span>
+             </div>
+             <div>
+                <button id="anniu">登录</button>
+             </div>
+             <br>
+             <div id="tongyi">
+                <input type="radio">同意<a href="https://st.music.163.com/official-terms/service">《服务条款》</a><a href="https://st.music.163.com/official-terms/privacy">《隐私政策》</a>
+             </div>
+             <br>
+             <div id="zhaohui">
+                <a href="https://ssl.zc.qq.com/v3/index-chs.html?from=pt">忘记密码,点此找回</a>
+             </div>
+          <br>
+          
+          <div>
+            -----------用其他方式登录-----------
+          </div>
+          <div>
+            <a><img src="https://img2.baidu.com/it/u=1268794162,306109073&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" id="qq"></a>
+         
+            <a><img src="https://img1.baidu.com/it/u=2129839008,3163326221&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" id="wx"></a>
+          </div>
+        </div>
+
+
+
+
+    </div>
+
+    
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flex布局实现div在页面居中效果</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        /* 固定定位  fixed  ，固定在网页的某个位置不动，不占网页位置*/
+        #box0 {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            display: flex;
+            /*申明flex容器，容器中的项目默认是横向排列*/
+        }
+
+        /* 导航栏中盒子的样式设置 */
+        .box0_01 {
+            opacity: 50%;     /*设置透明度*/
+            height: 80px;
+            /* border-style: solid;    显示实心边框 */
+            flex: 1;
+            /*声明当前盒子在flex容器中的占比*/
+        }
+
+        /* flex父级盒子（占满整个屏幕）  flex容器 */
+        #box1 {
+            width: 100%;
+            /*宽度占满整个屏幕*/
+            height: 100vh;
+            /*vh是可视化高度单位,高度占满整个屏幕*/
+            /* background-color: brown; */
+            background-image: url(./世界地图壁纸.jpg);
+            display: flex;
+            /*申明flex容器*/
+        }
+
+        /* flex容器 中创建 Flex项目 */
+        .box1_01 {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            opacity: 90%;     /*设置透明度*/
+            border-radius: 5%;     /*设置边框圆角*/
+            margin: auto;
+            /* 快捷居中方式: margin: auto; 结合 height: 100vh; 结合 display: flex; 可以实现快速居中*/
+        }
+
+        /* 给登录页面的字体加样式 */
+        #title {
+            font-size: 30px;
+            font-family: 楷体;
+            margin-top: 20px;
+            margin-left: 200px;
+        }
+
+        /* 用户账户输入框 */
+        .input {
+            margin-left: 20px;
+            margin-top: 50px;
+            margin-left: 120px;
+        }
+
+        button {
+            width: 120px;
+            height: 40px;
+            font-size: 20px;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 需求1：使用flex布局实现居中 -->
+    <!-- 需求2：在屏幕顶部固定一个菜单栏,每个菜单颜色不一样 -->
+    <!-- 导航栏 -->
+    <div id="box0">
+        <div class="box0_01"></div>
+        <div class="box0_01" style="background-color: red;">
+        </div>
+        <div class="box0_01" style="background-color: yellow;">
+            <div>
+                <a href="https://www.yzktw.com.cn/post/1662752.html">css背景色怎么设置透明</a>
+            </div>
+        </div>
+        <div class="box0_01" style="background-color: blue;">
+        
+        </div>
+        <div class="box0_01" style="background-color: green;">
+        
+        </div>
+        <div class="box0_01" style="background-color:aquamarine;">
+        
+        </div>
+        <div class="box0_01" style="background-color: purple;">
+        
+        </div>
+        <div class="box0_01">
+
+        </div>
+    </div>
+    <!-- 1、创建flex父级盒子  flex容器 -->
+    <div id="box1">
+        <!-- 2、在 flex容器 中创建 Flex项目-->
+        <div class="box1_01">
+            <div id="title">登录界面</div>
+            <div class="input">
+                <span>账户:</span>
+                <input type="text" placeholder="请输入账号">
+            </div>
+            <div class="input">
+                <span>密码:</span>
+                <input type="password" placeholder="请输入密码">
+            </div>
+            <div class="input">
+                <span>邮箱:</span>
+                <input type="email" placeholder="请输入邮箱">
+            </div>
+            <div class="input">
+                <button style="border-radius: 10%;">
+                    登录
+                </button>
+            </div>
+            <div style="margin-left: 300px; margin-top: 20px;">
+                <a href="zhuce.html" style="color: pink;">点击调转注册界面</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 为什么 用flex布局？    因为能够让界面更加的灵活，不会受浏览器窗口的缩放所影响-->
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ邮箱登录界面布局复刻</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #box {
+            /* 设置这个box1宽度和高度分别为当前浏览器窗口可视化宽高 */
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            /* 设置当前为flex容器，并且容器中的项目是从上到下排列 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #box1 {
+            /* 申明 导航栏区域 在 box盒子中 的占比 */
+            flex: 1;
+            background-color: brown;
+            /* 设置当前为flex容器 */
+            display: flex;
+        }
+
+        #box2 {
+            /* 申明 中间登录区域 在 box盒子中 的占比 */
+            flex: 9;
+            background-color: yellow;
+            /* 设置当前为flex容器 */
+            display: flex;
+        }
+
+        #box3 {
+            /* 申明 底部栏区域 在 box盒子中 的占比 */
+            flex: 1;
+            background-color: green;
+            /* 设置当前为flex容器 */
+            display: flex;
+        }
+
+        #box2_01{
+            width: 1000px;    
+            height: 500px;
+            background-color: white;
+            margin: auto;
+            /* 设置当前为flex容器 */
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 设置当前div为网页宽高，作为flex容器 -->
+    <div id="box">
+        <!-- 导航栏区域 -->
+        <div id="box1">
+            <!-- 写6个flex项目 -->
+            <div style="flex: 4;background-color: red;"></div>
+            <div style="flex: 16;background-color:cornflowerblue;"></div>
+            <div style="flex: 1;background-color: blue;"></div>
+            <div style="flex: 1;background-color: green;"></div>
+            <div style="flex: 1;background-color: purple;"></div>
+            <div style="flex: 1;background-color: grey;"></div>
+        </div>
+        <!-- 中间登录区域 -->
+        <div id="box2">
+            <!-- 写一个flex项目实现居中效果，并且后期也当做是一个flex项目 -->
+            <div id="box2_01">
+                <div style="flex:1.5; background-image:url('https://rescdn.qqmail.com/zh_CN/htmledition/images/tg-mail20f1b0.gif');">盒子1</div>
+                <div style="flex:1; background-color: pink;">
+                    <h1>登录</h1>
+                    <div>
+                        <input type="text" placeholder="请输入账号：">
+                    </div>
+                    <div>
+                        <input type="password" placeholder="请输入密码：">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 底部栏区域 -->
+        <div id="box3">
+            <!-- 3个felx项目 -->
+            <div style="flex:1 ;background-color: red;"></div>
+            <div style="flex:2 ;background-color: blue;"></div>
+            <div style="flex:1 ;background-color: green;"></div>
+        </div>
+    </div>
+</body>
+
+</html>

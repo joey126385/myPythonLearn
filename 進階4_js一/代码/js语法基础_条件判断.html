@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>条件判断</title>
+</head>
+<body>
+    <script>
+        /*
+           条件判断：
+
+           js 中的条件判断语句有三个非常重要的词汇： if -- else if -- else
+
+           if 如果 
+           else 否则
+           else if 否则如果  【在Python中是简写的 elif】
+
+
+        语法：
+           if(条件表达式){
+                执行代码1
+           }else if(条件表达式){
+                执行代码2
+           }else{
+                执行代码2
+           }
+
+
+           需求：实现一个登陆功能
+
+           1、模拟数据库储存好一个账户
+           2、模拟用户输入账户密码，并且用变量进行保存
+           3、判断账户密码是否正确，正确提示“登陆成功”，错误提示“登陆失败”
+        */
+
+        // 1、模拟数据库储存好一个账户
+        let s_name = "不渝"
+        let s_Pworld = 1024
+
+        // 2、模拟用户输入账户密码，并且用变量进行保存
+        let p_name = prompt("请输入你的姓名：")
+        let p_Pworld = prompt("请输入你的密码：")
+
+        console.log(`你的账号是：${p_name},你的密码是：${p_Pworld}`);
+
+        // 3、判断账户密码是否正确，正确提示“登陆成功”，错误提示“登陆失败”
+        /*
+            if(p_name==s_name){
+                console.log("账号名验证成功");
+                if(p_Pworld==s_Pworld){
+                    console.log("登录成功！");
+                }else{
+                    console.log("登录失败，密码错误！");
+                }
+            }else{
+                console.log("账号名验证失败");           
+            }
+        */
+       if(p_name==s_name && p_Pworld==s_Pworld){
+            console.log("登录成功！");
+       }else{
+            console.log("登录失败！");
+       }
+
+    </script>
+</body>
+</html>

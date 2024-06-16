@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QQ邮箱布局解说</title>
+    <link rel="stylesheet" href="./flex实战头部.css">
+    <link rel="stylesheet" href="./felx实战中部.css">
+    <link rel="stylesheet" href="./flex实战尾部.css">
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #box{
+            width: 100%;
+            height: 100vh;
+            background-color: aqua;
+            display: flex;
+            /* box将会是一个flex容器 */
+            flex-direction : column;
+        }
+        /* 由于每个游览器的窗口宽高有点不太一样
+            当不知道一个内容具体的宽高大小的时候，可以使用到felx中的一个方案：申明flex占比
+        */
+        #box1{
+            width: 100%;
+            /* 高度先不写 */
+            flex: 1;    /*申明当前盒子占flex容器的1份*/
+            background-color: red;
+            display: flex;  /*设置为flex容器*/
+        }
+        #box2{
+            width: 100%;
+            /* 高度先不写 */
+            flex: 10;    /*申明当前盒子占flex容器的8份*/
+            background-color:yellow;
+            display: flex;  /*设置为flex容器*/
+            /* 1、通过分别设置横轴与侧轴位置，实现设置为水平居中 */
+            /* justify-content:center;
+            align-items:center; */
+        }
+        #box3{
+            width: 100%;
+            /* 高度先不写 */
+            flex: 1;    /*申明当前盒子占flex容器的1份*/
+            background-color:blue;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <!-- 一、设置一级布局，felx容器 -->
+    <div id="box">
+        <!-- 二、设置一级布局的区域 -->
+        <!-- 头部 -->
+        <div id="box1">
+            <div id="box1_01">QQ邮箱logo区域</div>
+            <div id="box1_02">空白区域</div>
+            <div id="box1_03">文字区域1</div>
+            <div id="box1_04">文字区域2</div>
+            <div id="box1_05">文字区域3</div> 
+            <div id="box1_06">文字区域4</div>
+        </div>
+        <!-- 中部 -->
+        <div id="box2">
+            <!-- 这个是一个居中div -->
+            <div id="box2_center">
+                <div id="box2_01">图片</div>
+                <div id="box2_02">
+                    <div id="d_z">
+                        <h1>登陆</h1>
+                        <span>姓名：</span><input type="text" placeholder="请输入你的账号">
+                        <span>密码：</span><input type="password" placeholder="请输入你的密码">
+                        <button>登陆</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 尾部 -->
+        <div id="box3">
+            <div id="box3_01"></div>
+            <div id="box3_02"></div>
+            <div id="box3_03"></div>
+        </div>
+    </div>
+</body>
+</html>

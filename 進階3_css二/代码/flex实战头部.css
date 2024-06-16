@@ -1,0 +1,24 @@
+#box1_01{
+    background-color: palevioletred;
+    flex: 1.5;
+}
+#box1_02{
+    background-color:darksalmon;
+    flex: 6;
+}
+#box1_03{
+    background-color:orangered;
+    flex: 0.5;
+}
+#box1_04{
+    background-color:aquamarine;
+    flex: 0.5;
+}
+#box1_05{
+    background-color:cornflowerblue;
+    flex: 0.5;
+}
+#box1_06{
+    background-color:purple;
+    flex: 0.5;
+}

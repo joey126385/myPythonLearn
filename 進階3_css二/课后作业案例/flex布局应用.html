@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            /* 去掉网页原始样式 */
+            margin: 0px;
+            padding: 0px;
+            background-color: palevioletred;
+        }
+        #box0{
+            width: 100%;
+            height: 80px;
+            background-color:black;
+            display: flex;
+        }
+        .box0_101{
+            flex: 1;
+        }
+        #box0_102{
+            flex: 4;
+            background-color: brown;
+        }
+        #box1{
+            width: 100%;
+            height: 30px;
+            background-color:crimson;
+            display: flex;
+        }
+        .box1_101{
+            flex:1;
+            background-color: cornflowerblue;
+        }
+        #box1_102{
+            flex:2;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+        <!-- 进行固定定位的div -->
+        <div id="box0">
+            <div class="box0_101"></div>
+            <!-- 作为一个flex容器 -->
+            <div id="box0_102">
+                <!-- 写11个div，每个div可以根据内容设置不同的占比 -->
+            </div>
+            <div class="box0_101"></div>
+        </div>
+        <div id="box1">
+            <div class="box1_101"></div>
+            <!-- 作为一个flex容器 -->
+            <div id="box1_102">
+                <!-- 写5个div，根据内容设置不同设置div的占比 -->
+            </div>
+            <div class="box1_101"></div>
+        </div>
+</body>
+</html>
