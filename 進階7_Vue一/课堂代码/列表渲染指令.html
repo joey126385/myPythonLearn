@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 将 vue.js包 准备好放 代码文件旁边 -->
+    <!-- 引入Vue --> <!-- 引入Vue -->
+    <script src="../包/vue.js"></script>
+</head>
+
+<body>
+    <!-- Vue - 列表渲染指令 -->
+    <!-- 功能：遍历数组, 可以结合列表 或者 表格去展示数据 -->
+    <!-- 语法：v-for="(迭代变量,索引变量) in 可迭代数据" :key="索引变量" -->
+    <div id="box">
+        <h1>{{userList}}</h1>
+        <!-- 列表 ul-li无序列表  ol-li 有序列表 -->
+        <ul>
+            <!-- 让变量i和下标变量index，重复去挂载的Vue对象数据源中的userList中取值，
+                每次变量i取一个值，index取变量i拿到的值的下标
+            -->
+            <li v-for="(i,index) in userList" :key="index">
+                <span style="background-color: aquamarine;">{{i.id}}</span>
+                <span style="background-color:darkorchid">{{i.name}}</span>
+                <span style="background-color: aquamarine;">{{i.age}}</span>
+                <span style="color: red;">{{index}}</span>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#box",
+            data: {
+                test_val: "hello vue!",
+                userList: [     // 数组数据 -- 用户数据
+                    { id: 1, name: '不渝', age: 18 },    //  用户对象
+                    { id: 2, name: '潼瑶', age: 28 },
+                    { id: 3, name: '林里', age: 28 },
+                    { id: 4, name: '麒麟', age: 38 }
+                ]
+            }
+        })
+        /*
+        已知数据：
+            userList: [     // 数组数据 -- 用户数据
+            { id: 1, name: '不渝', age: 18 },    //  用户对象
+            { id: 2, name: '潼瑶', age: 28 },
+            { id: 3, name: '麒麟', age: 38 }
+            ]
+
+        需求：
+            v-for遍历列表数据。
+        */
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 登录案例 -->
+    <input id="userName" type="text" placeholder="请输入你的账号">
+    <br>
+    <input id="userPass" type="password" placeholder="请输入你的密码">
+    <div></div>
+    <br>
+    <button id="login">点我登录</button>
+
+    <script>
+        /* 事件：因为某个因素触发了某个事情，我们叫做事件。
+                addEventListener  在某个dom元素添加事件监听
+        语法： dom元素.addEventListener('事件名','事件处理函数')
+        */
+
+        // 1、click 点击事件    -> 应用场景：点击后发生什么事情
+        let login = document.getElementById("login")
+        console.log(login);
+
+        login.addEventListener('click', () => {
+            alert("你点击了登录哦！")
+        })
+
+
+        // 2、change 事件是在表单元素的值发生改变并失去焦点时触发的事件。 -> 应用场景：获取输入框值
+        let userName = document.getElementById("userName")
+        console.log(userName);
+
+        userName.addEventListener('change', () => {
+            console.log(userName.value);
+            // 
+            if (userName.value!="不渝") {
+                let div = document.querySelector("div")
+                div.style.color = "red"
+                div.innerHTML = "账户名只有一个，请仔细核对"
+            } else {
+                let div = document.querySelector("div")
+                div.innerHTML = null
+            }
+        })
+
+
+        // 3、input 事件是在用户输入内容时实时触发的事件。它在输入框的值发生变化时立即触发-> 应用场景：获取输入框值
+        let userPass = document.getElementById("userPass")
+        console.log(userPass);
+
+        userPass.addEventListener('input', () => {
+            console.log(userPass.value);
+            // .length 用于获取长度
+            if (userPass.value.length < 4 || userPass.value.length > 8) {
+                let div = document.querySelector("div")
+                div.style.color = "red"
+                div.innerHTML = "密码必须为4~8位"
+            } else {
+                let div = document.querySelector("div")
+                div.innerHTML = null
+            }
+        })
+
+    </script>
+</body>
+
+</html>

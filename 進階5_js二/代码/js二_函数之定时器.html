@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        // 箭头函数由于可以匿名，所以可以当回调函数去使用，就是箭头函数可以被一个函数当做参数去使用
+
+        /*  定时器   ==> 美团外卖 大家购物后能够看到骑手活动  在地图上骑手的位置是隔断时间刷新一次的 
+            骑手的位置 (骑手会有一个app, app联网, app上有定时器， 隔一段时间获取一次骑手经纬度信息，提交到美团，美团刷新在买家要页面)
+            到点秒杀
+        */
+
+
+
+        /* setTimeout(要做什么,时间)   定时，只执行一次    -> 到点秒杀 
+            要做什么 : 传参一个实现具体动作的函数
+            时间 ： 定时时间，传参一个数字，时间单位是毫秒
+        */
+
+        // 实例： 在3秒后提示该下课了
+        // 当一个函数被当做参数去进行使用的时候，这个函数可以称之为回调函数
+        // setTimeout(()=>{
+        //    console.log("该下课了"); 
+        // },3000)
+
+
+
+        /*  setInterval(要做什么,时间)    隔一段时间执行一次     -> 定位
+        
+            要做什么: 指的是一个实现具体动作的函数 
+            时间 : 定时器的时间，单位是毫秒
+        */
+        // 实例： 隔3秒 提示，该学习了
+
+        // setInterval(()=>{
+        //     console.log("该学习了！");
+        // },3000)
+
+
+        // 时间函数封装
+        let time = () => {
+            // Date是js内置时间模块，可以获取当前时间对象
+            let myDate = new Date();
+            // 获取完整的年份(4位,1970-????)
+            let n = myDate.getFullYear();
+            let y = myDate.getMonth() + 1; // 获取当前月份(0-11,0代表1月)
+            let r = myDate.getDate(); // 获取当前日(1-31)
+            let s = myDate.getHours(); // 获取当前小时数(0-23)
+            let f = myDate.getMinutes(); // 获取当前分钟数(0-59)
+            let m = myDate.getSeconds(); // 获取当前秒数(0-59)
+            let arr = n + "年" + y + "月" + r + "日" + s + "时" + f + "分" + m + "秒";
+            return arr;
+        };
+        // 实现定时提醒当前时间的效果
+        setInterval(() => {
+            console.log(time());
+        }, 1000)
+
+    </script>
+</body>
+
+</html>

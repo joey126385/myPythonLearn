@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 函数 ： 一段程序员定义好的可以重复使用的代码块（工具）
+        /*
+            // 第一种方式：常规声明
+            function 函数名(){
+                逻辑代码
+            }
+
+            function 关键词
+            函数名 ： 自定义的
+            () : 形参列表，可以写也可以不写
+            {} ：花括号里面包裹的是函数代码块，可以有返回值，也可以没有   
+            return  用于返回结果 
+
+            # 以下是Python定义函数回顾
+            def zha_zzj(shui_guo):
+                print("正在榨果汁~~~~")     # 用打印语句模拟榨汁机工作
+                return f"{shui_guo}汁"     # 返回一个拼接好的 水果汁字符串
+        */
+
+        // 举例：榨汁机
+        function zha_zzj(shui_guo) {
+            console.log("正在榨果汁~~~~~");          // 打印语句模拟榨汁机工作
+            return `${shui_guo}汁`
+        }
+
+        // 测试
+        let bei_zi1 = zha_zzj("苹果")
+        console.log(bei_zi1);
+
+        let bei_zi2 = zha_zzj("桃子")
+        console.log(bei_zi2);
+
+
+        console.log("---------------------------------------------");
+        /*
+            // 第二种方式：箭头函数（可以匿名函数）
+            () =>{
+                逻辑代码
+            }
+
+            () : 形参列表，可以写也可以不写
+            => 是箭头函数的固定语法
+            {} ：花括号里面包裹的是函数代码块，可以有返回值，也可以没有
+        */
+        let zz = (shui_guo) => {
+            console.log("正在榨果汁~~~~~");          // 打印语句模拟榨汁机工作
+            return `${shui_guo}汁`           
+        }
+
+        let bei_zi3 = zz("香蕉")
+        console.log(bei_zi3);
+
+        let bei_zi4 = zz("榴莲")
+        console.log(bei_zi4);
+
+    </script>
+</body>
+
+</html>

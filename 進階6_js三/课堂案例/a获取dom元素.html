@@ -1,0 +1,47 @@
+<!-- 申明文档类型 -->
+<!DOCTYPE html>
+<!-- html根部标签 -->
+<html lang="en">
+    <!-- 网页标签  -->
+    <head>
+        <meta charset="UTF-8">
+        <title>js三学习</title>
+    </head>
+    <!-- 网页的主体部分 -->
+    <body>
+        <p id="p001">今天学习获取dom</p>
+
+        <div class="box1">第一个div</div>
+        <div class="box1">第二个div</div>
+        <div class="box1">第三个div</div>
+
+        <button>第一个按钮</button>
+        <button>第二个按钮</button>
+        <button>第三个按钮</button>
+        <button>第四个按钮</button>
+
+        <script>
+            // 通过选择器获取第一个匹配的元素 [ 选择器： # id选择器 ， . class选择器 ， 元素选择器]
+            
+            // 1、通过id选择器获取 dom    .getElementById
+            // document 指的是当前网页
+            let p001 = document.getElementById("p001")
+            console.log(p001);
+            
+            // 2、根据 class选择器 获取dom元素      .getElementsByClassName
+            // 通过类名或的dom元素是一个数组
+            let box1 = document.getElementsByClassName("box1")
+            console.log(box1[0]);
+            console.log(box1[1]);
+            console.log(box1[2]);
+
+
+            // 3、元素选择器    --- 只会获取一次，获取到的数据是第一个能够匹配到的元素dom
+            // .querySelector 获取方式，只会获取到第一个匹配到的数据
+            let but = document.querySelector("button")
+            console.log(but);
+
+        </script>
+
+    </body>
+</html>

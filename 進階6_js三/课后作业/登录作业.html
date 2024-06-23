@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: palevioletred;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #box {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            /* 这里设置当前为flex父级盒子，在这里设置盒子中项目的的摆放方式 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        #box1 {
+            flex: 1;
+            background-color: blue;
+            /* 为了实现导航栏区域 */
+            display: flex;
+        }
+
+        #box2 {
+            /* 主题内容区域 */
+            flex: 8;
+            background-color: beige;
+            display: flex;
+            /*设置为flex父级容器*/
+        }
+
+        #box3 {
+            /* 底部区域 */
+            flex: 1;
+            background-color: aqua;
+            display: flex;
+            /*设置为flex父级容器*/
+        }
+
+        /* 用来设置导航栏区域中的flex项目的 */
+        #box1_01 {
+            flex: 4;
+            background-color: red;
+        }
+
+        #box1_02 {
+            flex: 20;
+            background-color: yellow;
+        }
+
+        #box1_03 {
+            flex: 1;
+            background-color: blue;
+        }
+
+        #box1_04 {
+            flex: 1;
+            background-color: green;
+        }
+
+        #box1_05 {
+            flex: 1;
+            background-color: orangered;
+        }
+
+        #box1_06 {
+            flex: 1;
+        }
+
+        #box2_01 {
+            width: 1200px;
+            height: 600px;
+            background-color: black;
+            margin: auto;
+            /* 将该盒子也作为一个fle容器 */
+            display: flex;
+        }
+
+        #box2_01_01 {
+            flex: 1;
+            /* background-color: aliceblue; */
+            background-image: url('https://rescdn.qqmail.com/zh_CN/htmledition/images/tg-mj1e9c5d.jpg');
+        }
+
+        #box2_01_02 {
+            flex: 1;
+            background-color: aqua;
+            /* 设置当前包裹登录内容的盒子为flex容器 */
+            display: flex;
+        }
+
+        #box3_01 {
+            flex: 1;
+        }
+
+        #box3_02 {
+            flex: 2;
+            background-color: blue;
+        }
+
+        #box3_03 {
+            flex: 1;
+        }
+
+        /* 写在 head 标签中的css代码是内部样式 */
+        #login_box {
+            width: 70%;
+            height: 80%;
+            background-color: blueviolet;
+            margin: auto;
+        }
+
+        #login_title {
+            font-size: 50px;
+            font-family: 楷体;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #input_box1 {
+            position: relative; left: 50px;
+        }
+
+        #input_box2 {
+            position: relative; left: 50px;top: 30px;
+        }
+        /* 输入框前面的提示 */
+        span{
+            font-size: 30px;font-family: 黑体;text-align: center;
+        }
+        /* 输入框 */
+        input{
+            width: 200px;height: 30px;font-size: 20px;border-radius: 5%;
+        }
+        /* 第三个输入框盒子，点击登录 */
+        #input_box3{
+            position: relative;left: 130px;top: 100px;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+            background-color: black;
+            color: aliceblue;
+            font-size: 20px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 用来包裹qq邮箱界面的三个区域的 -- 开始  -->
+    <div id="box">
+        <!-- 导航栏区域 -->
+        <div id="box1">
+            <div id="box1_01"></div>
+            <div id="box1_02"></div>
+            <div id="box1_03"></div>
+            <div id="box1_04"></div>
+            <div id="box1_05"></div>
+            <div id="box1_06"></div>
+        </div>
+        <!-- 主题内容区域 -- 开始 -->
+        <div id="box2">
+            <!-- 写一个flex项目，用于居中  --- 开始 -->
+            <div id="box2_01">
+                <!-- 左侧图片区域 -->
+                <div id="box2_01_01"></div>
+
+                <!-- 右侧登录区域--开始 -->
+                <div id="box2_01_02">
+                    <!-- 这个div是用于居中，并且包裹登录内容的 -->
+                    <div id="login_box">
+                        <p id="login_title">登录</p>
+                        <!-- 第一个输入框,输入用户名 -->
+                        <div id="input_box1">
+                            <span>昵称:</span>
+                            <input id="userName" type="text" placeholder="请输入账户昵称">
+                        </div>
+                        <!-- 第二个输入框,输入用户密码 -->
+                        <div id="input_box2">
+                            <span>密码:</span>
+                            <input  id="userPass" type="password" placeholder="请输入账户密码">
+                        </div>
+                        <!-- 第三个输入框盒子，点击登录 -->
+                        <div id="input_box3">
+                            <button id="login">点击登陆</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧登录区域--结束 -->
+
+            </div>
+            <!-- 写一个flex项目，用于居中  --- 结束 -->
+
+        </div>
+        <!-- 主题内容区域 -- 结束 -->
+
+
+        <!-- 底部区域 -->
+        <div id="box3">
+            <div id="box3_01"></div>
+            <div id="box3_02"></div>
+            <div id="box3_03"></div>
+        </div>
+    </div>
+    <!-- 用来包裹qq邮箱界面的三个区域的 --结束  -->
+
+    <!-- js代码： -->
+    <script>
+        /*
+        实现登录界面。
+             需求：
+             1、用户在输入账户和密码后，在登录过程中，检测密码是否是八位数
+             2、登录是否成功有弹窗提示
+             拓展：登录成功后调转到其他页面   
+         提示：window.location.href="https://www.bilibili.com/?spm_id_from=333.788.0.0";
+        */
+        
+    </script>
+</body>
+
+</html>

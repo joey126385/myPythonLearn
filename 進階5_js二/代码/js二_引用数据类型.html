@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js二学习1</title>
+</head>
+
+<body>
+    <script>
+
+        // 引用数据类型
+        // 数组 (Array)是一组按顺序排列的数据的集合，数组中的每个值都称为元素。数组用方括号进行表示。
+        // 数组中的每个元素都有一个唯一的索引，从0开始递增
+        // 数组中元素可以是 数字、字符串、布尔值、对象以及其他数组等
+        let ar = [1024,"不渝",true,false,[1314,618,111]]
+        //下标/索引  0    1     2    3         4
+        console.log(ar);
+
+        // 数组常见操作：
+        // 1、根据下标取值*****
+        console.log(ar[1]);
+        // 2、获取数组的长度*****
+        console.log(ar.length);
+        // 3、向数组末尾添加一个元素****
+        ar.push("今天天气好好哦")
+        console.log(ar);
+        // 4、从数组末尾移除并返回一个元素****
+        ar.pop()
+        console.log(ar);
+        // 5、向数组开头添加一个元素
+        ar.unshift("今天下雨了")
+        console.log(ar);
+        // 6、从数组开头移除并返回一个元素。
+        ar.shift()
+        console.log(ar);
+
+        console.log("------------分割线---------------------------------------");
+
+
+        // 对象 （Object）类型是一组由键、值组成的无序集合，定义对象类型需要使用花括号`{ }`    
+        // 对象的键 是字符串，只是它不需要加引号
+        let user_msg = {name:"不渝",age:18}
+        console.log(user_msg);
+
+        // 访问对象中的数据，需要通过键去查询： 对象名.键名
+        console.log(user_msg.name);
+
+
+
+        let test = [
+            {
+                "id": 19099,
+                "name": "猪哥哥",
+                "age": 19
+            },
+            {
+                "id": 19100,
+                "name": "猪哥哥",
+                "age": 19
+            }
+        ]
+   
+    </script>
+</body>
+
+</html>

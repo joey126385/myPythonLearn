@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html> 
+
+    <head>
+        <meta charset="UTF-8">
+        <title>音频播放案例</title>
+    </head>
+
+    <body> 
+
+        <!-- 音频元素，用于嵌入音频内容 -->
+        <audio id="myAudio"> 
+            <!-- 指定音频文件的路径和类型 -->
+            <source src="./sound.mp3" type="audio/mpeg"> 
+        </audio>
+
+        <!-- 按钮元素，用于触发音频播放 -->
+        <button id="bo">播放声音</button> 
+
+       
+        <script>
+            
+            // 获取ID为"bo"的按钮元素  
+            let bo = document.getElementById("bo");
+            // 获取ID为"myAudio"的音频元素  
+            let audio = document.getElementById("myAudio");
+
+
+            // 为ID为"bo"的按钮元素添加点击事件监听器  
+            bo.addEventListener('click', () => {
+                // 当按钮被点击时，调用音频元素的play方法以播放音频  
+                audio.play();
+            })
+
+        </script>
+
+    </body>
+
+</html> <!-- HTML文档的结束标签 -->

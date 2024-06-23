@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酒驾作业</title>
+  </head>
+  <body>
+    <script>
+      //課後作業1：查酒驾题目
+      let driver = prompt("駕駛酒精濃度");
+      let result = "正常駕駛";
+      if (driver > 20) {
+        if (driver < 80) {
+          result = "饮酒驾驶";
+        } else {
+          result = "醉酒驾驶";
+        }
+      }
+      alert(`駕駛狀態 ${result}`);
+
+      //引用數據類型
+
+      // for循環
+
+      //while 循環
+
+      //函數 function
+
+      //定時器 setTimeout()
+
+      function f_setTimeout() {
+        setTimeout(() => {
+          console.log(`每三秒執行一次`);
+        }, 3000);
+      }
+      //f_setTimeout();
+      //定時器 setInterval()
+      function f_setInterval() {
+        setInterval(() => {
+          console.log(`每三秒執行一次`);
+        }, 3000);
+      }
+      f_setInterval();
+    </script>
+  </body>
+</html>

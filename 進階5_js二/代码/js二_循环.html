@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 循环：重复不停的做某件事情或者动作
+
+        /*  for 循环
+            `语法说明`
+                - 形参1: 初始化计数器变量 -- 设定循环初始值
+                - 形参2: 设置循环的次数 -- 设置循环结束值，循环结束条件
+                - 形参3：每次循环结束后更新（递增或递减）计数器的值 -- 类似于Python中的步长
+
+                for(形参1;形参2;形参3){
+                         //循环代码块;    
+                }   
+        */
+        // 循环练习1：循环出数字 1-10 【提示：js中的格式化输出  `字符${数据}`】
+        for (let i = 1; i <= 10; i++) {
+            console.log(`i=${i}`);
+        }
+
+        console.log("------------------------------------------------");
+
+        // 循环练习2：循环出 1-10 的所有偶数 包括10    2,4,6,8,10
+        for (let i = 2; i <= 10; i += 2) {
+            console.log(`i=${i}`);
+        }
+
+        console.log("------------------------------------------------");
+
+        // 循环在实际开发中的应用
+        // 用户类别数组
+        let user_list_obj = [
+            { id: 1, user_name: '不渝', pass_word: 1024 },    // 0
+            { id: 2, user_name: '大渝', pass_word: 2048 },    // 1
+            { id: 3, user_name: '小渝', pass_word: 4096 },     // 2
+            { id: 4, user_name: '等渝', pass_word: 1133 }     // 2
+        ]
+        // 使用循环遍历数据，并输出数组中每个对象的值
+        let x = user_list_obj.length      // 获取数组长度
+        console.log(`数组长度x=${x}`);
+
+        for (let j = 0; j < x; j++) {   // 0,1,2
+            let str = `编号：${user_list_obj[j].id}  账号：${user_list_obj[j].user_name} 密码：${user_list_obj[j].pass_word}`
+            console.log(str);
+        }
+
+
+        /*  while 循环
+            `语法说明`
+                while(条件){
+                    执行代码
+                }
+            写while的时候是一定要有循环出口的，不然会死循环，浏览器会卡死
+
+        */
+        // 循环练习：循环出数字 1-10
+        let i = 1
+        while (i <= 10) {
+            console.log(`i=${i}`);
+            i = i + 1     // 循环出口（让循环判断条件产生变化的代码）
+        }
+
+        // while 循环遍历数据
+        // 假设我们有一个包含对象的数组，每个对象都有姓名和年龄属性  
+        let peopleArray = [
+            { name: '张三', age: 25 },   // 0
+            { name: '李四', age: 30 },   // 1
+            { name: '王五', age: 35 },   // 2
+            // ... 可以继续添加更多对象  
+        ];
+        // 得到数组长度
+        let p_l = peopleArray.length
+
+        let j=0
+        while(j<p_l){
+            let str = `姓名：${peopleArray[j].name}  年龄：${peopleArray[j].age}`
+            console.log(str);
+            j += 1 
+        }
+
+
+    </script>
+</body>
+
+</html>

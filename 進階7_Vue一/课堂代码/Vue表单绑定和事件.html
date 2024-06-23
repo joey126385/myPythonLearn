@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>表单绑定和事件</title>
+        <!-- 将 vue.js包 准备好放 代码文件旁边 -->
+        <!-- 引入Vue -->
+        <script src="../包/vue.js"></script>
+    </head>
+    <body>    
+        <div id="box">
+            <!-- 一、插值渲染法  {{Vue数据源中键名}} -->
+            <h1>{{text_val}}</h1>
+            <!-- 二、双向绑定指令    v-model = "Vue源数据中的键名"  注意：双向表单绑定的过程中，html绑定的键名一定是在源数据中由的-->
+            <input type="text" v-model="user_name" placeholder="请输入用户名">
+            <input type="password" v-model="user_pass" placeholder="请输入用户密码">
+            <h2>{{user_name}}</h2>
+            <h2>{{user_pass}}</h2>
+            <!-- 三、事件绑定指令  @click="挂载的Vue对象中定义的方法"  注意：html绑定的事件一定是要在Vue中的methods中存在 -->
+            <button @click="click_func">登录</button>
+        </div>
+
+        <script>
+            new Vue({
+                el : "#box",      // 挂载html
+                data : {
+                    text_val : "Hello Vue!",
+                    user_name : null ,       // 用于绑定用户名
+                    user_pass : null         // 用于绑定用户密码
+                },
+                methods : {       // 方法区
+                    // 自定义的方法
+                    click_func(){
+                        alert("111111111111")
+                        console.log(`用户名：${this.user_name}，用户密码${this.user_pass}`);
+                    }
+                }
+            })
+        </script>
+    </body>
+</html>

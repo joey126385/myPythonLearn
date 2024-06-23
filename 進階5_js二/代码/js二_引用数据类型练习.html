@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>js二学习1</title>
+</head>
+
+<body>
+    <script>
+
+        // 数组  Array
+        // 数组中的每个元素都有一个唯一的索引，从0开始递增
+
+        // 对象 （Object）类型是一组由键、值组成的无序集合，定义对象类型需要使用花括号`{ }`    
+        // 对象的键 是字符串，只是它不需要加引号
+        // 通 对象名.键名 取值
+
+
+        // 对象嵌套对象的格式
+        // 多个人的信息，并且每个人的信息对应一个键
+        let user_table_ojc = {
+            user1: { id: 1, user_name: '不渝', pass_word: 1024 },
+            user2: { id: 2, user_name: '大渝', pass_word: 2048 },
+            user3: { id: 3, user_name: '小渝', pass_word: 4096 }
+        }
+        console.log(user_table_ojc);
+        // 获取 user_table_ojc（用户表对象） 中 第一个用户（user1） 对应的 用户信息的 用户名 （user_name）
+        // 1、user_table_ojc（用户表对象） 中 第一个用户（user1）对应的 用户信息
+        console.log(user_table_ojc.user1);
+        // let u1 = user_table_ojc.user1
+        // 2、获取到 用户 user1 对应的用户信息中 键为 user_name
+        console.log(user_table_ojc.user1.user_name);
+        // console.log(u1.user_name);
+
+
+        console.log("---------------------------------------");
+        
+        // 数组嵌套对象格式
+        // 直接将多个人的信息集合到一起
+        let user_list_obj = [
+            { id: 1, user_name: '不渝', pass_word: 1024 },    // 0
+            { id: 2, user_name: '大渝', pass_word: 2048 },    // 1
+            { id: 3, user_name: '小渝', pass_word: 4096 }     // 2
+        ]
+        // 获取 user_list_obj 中 的  user_name 数据 '小渝'
+        // 1、获取 user_list_obj 中 的第三个元素
+        console.log(user_list_obj[2]);
+        // 2、获取第三个元素中的 user_name 键对应的 小渝
+        console.log(user_list_obj[2].user_name);
+        
+
+    </script>
+</body>
+
+</html>

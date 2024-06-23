@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title> 
+    </head>
+    <body>
+        <!-- 原始状态下的代码 -->
+        <p id="p001">今天学习获取dom</p>
+
+        <div class="box1">第一个div</div>
+        <div class="box1">第二个div</div>
+        <div class="box1">第三个div</div>
+
+        <hr>
+
+        <!-- 演示当用户输入了 数据之后，如何获取输入框中的数 -->
+        <!-- 为了模拟用户已经输入的状态，所有我手动加了 一个 value 值 模拟用户输入的值  -->
+        <input id="userName" type="text" placeholder="请输入你的账号" value="不渝">
+        <input id="userPass" type="password" placeholder="请输入你的密码" value="1024">
+
+        <script> 
+            
+            // 1、获取dom修改标签样式  dom元素.style
+            let p1 = document.getElementById("p001")
+            console.log(p1);
+            // 通过dom元素修改标签颜色、字体
+            p1.style.color = "red"
+            p1.style.fontFamily = "楷体"
+            
+            // 2、获取 dom元素 对应标签中的 文本信息   dom元素.innerHTML 【大家可以理解为这个innerHTML属于是dom对象中的一个属性】
+            let box1 = document.getElementsByClassName("box1")
+            console.log(box1);
+            console.log(box1[1].innerHTML);
+
+            // 3、获取输入框的数据 dom元素.value 
+            let userName_input = document.getElementById("userName")
+            console.log(userName_input);
+            console.log(userName_input.value);
+
+            let userPass_input = document.getElementById("userPass")
+            console.log(userPass_input);
+            console.log(userPass_input.value);
+
+        </script>
+    </body>
+</html>

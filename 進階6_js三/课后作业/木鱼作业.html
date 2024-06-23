@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>敲木鱼</title>
+    <style>
+        body {
+            padding: 0px;
+            /*内边距*/
+            margin: 0px;
+            /*外边距*/
+        }
+
+        #box1 {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            /*声明flex布局*/
+            display: flex;
+        }
+
+        .box1_01 {
+            margin: auto;
+        }
+
+        #gongDe {
+            font-family: 楷体;
+            font-size: 80px;
+            color: white;
+        }
+ 
+        #vip {
+            margin: 50px 120px;
+            /* 50是上下边距  120是左右边距*/
+            border-radius: 80%;
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建一个flex容器 -->
+    <div id="box1">
+        <!-- 创建一个flex -->
+        <div class="box1_01">
+            <img id="button" src="https://pic.rmb.bdstatic.com/bjh/down/78df3a803bf943b4853a8b5d587dfdd0.gif">
+            <br><!-- 图片和按钮都是块级标签 -->
+            <div id="gongDe">
+                功德:
+                <span>0</span>
+            </div>
+            <button id="vip">VIP全自动</button>
+        </div>
+    </div>
+
+
+    <script>
+        /*
+            需求一: 实现点击图片,让功德数字+1
+            需求二: 新增一个电脑托管按钮,实现让电脑帮我们敲（定时器）
+            拓展: 同学们课后，利用clearInterval函数实现让定时器停下来。
+        */
+
+    </script>
+
+</body>
+
+</html>
