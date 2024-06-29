@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!-- 将 vue.js包 准备好放 代码文件旁边 -->
+    <!-- 引入Vue -->
+    <script src="../包/vue.js"></script>
+</head>
+
+<body>
+    <!-- 条件渲染 : html标签的显示 根据 当前标签的条件渲染状态来决定(true 是显示，flase 是隐藏) 
+        v-if : 通过删除和添加dom元素实现显示与隐藏
+        v-show : 通过设置css样式实现显示和隐藏
+    -->
+    <div id="box">
+        <h1>{{test_val}}</h1>
+        <p v-show="vip_bool" @click="vip_stop">欢迎来到我的网站,点击我注册</p>
+
+        <div v-show="stop_bool" ref="mydom">
+            <input type="text" placeholder="请输入用户名">
+            <input type="password" placeholder="请输入用户密码">
+            <button @click="x">注册</button>
+            <button @click="vip_stop">取消注册</button>
+        </div>
+    </div>
+
+    <script>
+        // 需求：实现点击Vip按钮后vip按钮隐藏，stop按钮显示, 当点击stop按钮后stop按钮隐藏，vip按钮显示
+        new Vue({
+            el: "#box",
+            data: {    // 数据源用于方式Vue对象的一些数据
+                test_val: "Hello Vue!",
+                vip_bool: true,     // 用于表示vip按钮显示状态
+                stop_bool: false,    // 用于表示stop按钮显示状态
+            },
+            methods: {        // 方法区
+                vip_stop() {
+                    // 将 vip按钮和stop按钮的显示状态进行反转
+                    // ! 表示取反义（类似于Python中的not），如果this.vip_bool中的值是true,!this.vip_bool的值是false
+                    let b1 = !this.vip_bool    // 得到vip按钮显示状态的反义词
+                    this.vip_bool = b1
+
+                    let b2 = !this.stop_bool      // 得到stop按钮显示状态的反义词
+                    this.stop_bool = b2
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="../包/vue.js"></script>
+    </head>
+
+    <body>
+        <div class="box">
+            <h1 style="color: red;">{{test_val}}</h1>
+            <div ref="mydom"></div>
+            <!-- 需求：当点击按钮的时候，上面被操作的div能够发生变化 -->
+            <button @click="b_click">点我</button>
+        </div>
+
+        <script>
+            new Vue({
+                el : ".box",
+                data : {
+                    test_val : "hello Vue！"
+                },
+                methods : {
+                    b_click(){
+                        // this.$refs.dom名字
+                        console.log(this.$refs.mydom);
+                        this.$refs.mydom.style.width = '500px'
+                        this.$refs.mydom.style.height = '500px'
+                        this.$refs.mydom.style.backgroundColor = "pink"
+                    }
+                }
+            })
+            /*
+            在`Vue`中，可以使用`ref`特殊属性来获取DOM元素的引用。
+            `ref`可以用于在`Vue`组件中给DOM元素添加一个标识符，然后通过`this.$refs`来访问该DOM元素的引用。
+            */
+        </script>
+    </body>
+
+</html>

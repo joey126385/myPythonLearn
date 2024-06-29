@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../包/vue.js"></script>
+</head>
+
+<body>
+    <!-- 
+        新增需求：在上一个案例基础上，当商品的件数达到临界值（10）的时候会提示不建议继续 增加商品件数。
+     -->
+    <div id="div2">
+        <h1 style="color: red;">{{test_val}}</h1>
+        <h1 >要求如下：
+            点击购买按钮，自动计算订单件数、总价（每件商品价格为100元） </h1>
+        <button @click="add">点击购买商品</button>
+        <h3>当前订单件数:{{x}}</h3>
+        <h2>当前订单总价:{{y}}</h2>
+    </div>
+
+    <script>
+        new Vue({
+            el : "#div2",
+            data : {
+                test_val : "hello Vue!" ,    // 用于进行挂载测试的数据
+                x : 0   // 用于是储存订单件数
+            },
+            methods : {     // 方法
+                add(){
+                    this.x++
+                }
+            },
+            computed : {    // 计算属性区域
+                y(){
+                    return this.x*100
+                }
+            },
+            watch : {    // 侦听区
+                x : {
+                    // handler 是语法默认就有的函数，用于在侦听到数据发生变化后Vue为我们自动执行
+                    // Vue在帮我们执行handler函数过程中，会自动获取新值与旧值
+                    handler(newVal, oldVal){
+                        console.log(`新值：${newVal}，旧值：${oldVal}`);
+                        if(newVal>=10){
+                            alert("当前商品件数过多，请仔细核对后下单！")
+                        }
+                    }
+                }
+            }
+        })
+
+        /*
+          在`Vue`中，`watch`（侦听器）是一种用于监听数据变化并执行相应操作的特殊选项。
+          通过定义一个`watch`对象，你可以监视指定的数据，并在数据变化时触发相应的回调函数。
+
+          普通侦听：
+          watch: {
+                被侦听键名:{
+                    handler(newVal, oldVal){
+                        console.log('侦听到事情后 一般我们会做一些事情 就可以在侦听器内 来写逻辑代码');
+                    }
+                }
+          }
+
+        */
+    </script>
+</body>
+
+</html>

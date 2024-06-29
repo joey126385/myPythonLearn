@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="div2">
+        {{test_val}}
+        <h1 >要求如下：
+            点击购买按钮，自动计算订单件数、总价（每件商品价格为100元） </h1>
+        <button @click="change()">点击购买商品</button>
+        <h3>当前订单件数:{{count}}</h3>
+        <h2>当前订单总价:{{money}}</h2>
+    </div>
+
+    <script>
+        // 练习：
+        // 新增需求：当商品的件数达到临界值（10）的时候会提示不建议继续 增加商品件数
+        new Vue({
+            el : "#div2",
+            data : { 
+                test_val : "hello Vue!",
+                count : 0 ,         // 用于存储商品件数
+            },
+            methods : {
+                change(){
+                    this.count++
+                }
+            },
+            computed : {
+                // 计算属性的方法,必须有返回值
+                money(){
+                    return this.count*100
+                }
+            }
+        })
+        /*
+
+          在`Vue`中，`watch`（侦听器）是一种用于监听数据变化并执行相应操作的特殊选项。
+          通过定义一个`watch`对象，你可以监视指定的数据，并在数据变化时触发相应的回调函数。
+
+          普通侦听：
+          watch: {
+                被侦听键名:{
+                    handler(newVal, oldVal){
+                        console.log('侦听到事情后 一般我们会做一些事情 就可以在侦听器内 来写逻辑代码');
+                    }
+                }
+          }
+
+        */
+
+    </script>
+</body>
+
+</html>

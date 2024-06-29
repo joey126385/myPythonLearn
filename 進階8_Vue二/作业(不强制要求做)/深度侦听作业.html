@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="div2">
+        {{test_val}}
+        <h1 >要求如下：
+            点击购买按钮，自动计算订单件数、总价（每件商品价格为100元） </h1>
+        <button @click="change()">点击购买商品</button>
+        <h3>当前订单件数:{{order.count}}</h3>
+        <h2>当前订单总价:{{money}}</h2>
+    </div>
+
+    <script>
+        new Vue({
+            el : "#div2",
+            data : { 
+                test_val : "hello Vue!",
+                order : {
+                    count : 0        // 用于存储商品件数
+                }
+            },
+            methods : {
+                change(){
+                    this.order.count++
+                }
+            },
+            computed : {
+                // 计算属性的方法,必须有返回值
+                money(){
+                    return this.order.count*100
+                }
+            }
+        })
+        
+        
+        /*
+           以下侦听对象数据（结构复杂的数据[数组和对象]）
+            深度侦听：
+            watch: {        // 侦听器
+                侦听对象键名:{
+                    handler(i){        // 这里的i是默认形参名，可以随意指定。
+                        console.log(i.键);
+                        console.log('侦听到事情后 一般我们会做一些事情 就可以在侦听器内 来写逻辑代码');
+                    },
+                    deep : true       // 开启侦听器 ，深度监听到对象中每一个属性的变化
+                }
+            }
+           
+            如果需要实现在页面刚刷新的时候就进行触发侦听
+            //  可以控制侦听器自动触发一次 ,默认为false
+            immediate: true
+
+        */
+
+    </script>
+</body>
+
+</html>

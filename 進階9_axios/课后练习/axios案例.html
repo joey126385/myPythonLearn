@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 导入Vue包 -->
+    <script src="../包/vue.js"></script>
+    <!-- 导入axios包 -->
+    <script src="../包/axios.js"></script>
+    <!-- css 内部样式  -网页皮囊 -->
+    <style>
+        /* 去掉浏览器的白边 */
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+        /* flex容器 */
+        .box {
+            display: flex;
+            width: 100%;
+            height: 100vh;     /*可视化高度*/
+            background-color: palevioletred;
+        }
+        /* flex项目 */
+        #div1 {
+            margin: auto;   /*结合flex容器当中的代码可以实现居中效果*/
+        }
+        /* 设定输入框样式 */
+        input {
+            font-size: 30px;
+        }
+        /* 设定按钮样式 */
+        button {
+            font-size: 30px;
+            background-color: grey;
+            border-radius: 20%;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- html代码 -网页骨架   -->
+    <div class="box">   
+        <div id="div1">
+            <h1>增删改查：</h1>
+            <!-- 输入框都使用 v-model 进行了双向绑定，绑定到了挂载的Vue对象中data数据源中的键 -->
+            <!-- 按钮都填了 @click点击事件，每个事件对应Vue对象方法区中的一个具体的函数 -->
+            <input type="text" v-model="add_username" placeholder="请输入新增的用户昵称">
+            <input type="text" v-model="add_age" placeholder="请输入新增的用户年龄">
+            <button @click="add">增</button>
+            <br><br>
+            <input type="text" v-model="del_id" placeholder="请输入被删除的用户id">
+            <button @click="del">删</button>
+            <br><br>
+            <input type="text" v-model="upd_username" placeholder="请输入修改后的用户昵称">
+            <input type="text" v-model="upd_id" placeholder="请输入被修改的用户id">
+            <button @click="upd">改</button>
+            <br><br>
+            <button @click="sel" style="background-color: black;">查</button>
+            <br>
+            <!-- 插值法，用于渲染挂载的Vue对象中data数据源中的数据 -->
+            <!-- {{user_list}} -->
+            <!-- v-for循环，用于遍历序列类型数据的 -->
+            <li v-for="(x,index) in user_list" :key="index">{{x}}</li> 
+        </div>
+    </div>
+
+    <!-- js代码 -网页灵魂 -->
+    <script>
+        // 创建了一Vue对象并且挂载到了 id选择器为div1的盒子上
+        new Vue({
+            el: "#div1",
+                //数据源
+            data: {     
+                del_id: null,    // 用于删除
+                add_username: null,    // 新增数据
+                add_age: null,    // 新增数据
+                upd_username: null,     // 用于修改
+                upd_id: null,    // 用于修改
+                user_list : null     // 用来存储查询到的数据合集  
+            },
+                // 方法区，函数区
+            methods: {      
+                add() {    //新增方法
+                    alert("新增方法")
+                },
+                del() {   // 删除方法
+                     alert("删除方法")
+                },
+                upd() {   //修改方法
+                    alert("修改方法")
+                },
+                sel() {   // 查询方法
+                    alert("查询方法")
+                }
+            }
+        })
+
+        /* 
+            axios使用
+            1、导包
+            2、axios() 创建一个axios请求对象
+            3、对这个axios对象进行设置
+
+            POST : 
+                axios({
+                    method : '请求方法',
+                    url : '请求地址',
+                    data : {
+                        请求参数键 : 值
+                    }
+                }).then((res)=>{
+                    // 写请求后的处理
+                })
+            
+            GET :
+                axios({
+                    method : '请求方法',
+                    url : "请求地址",
+                    params : {
+                        请求参数键 : 值 
+                    }
+                }).then((res)=>{
+                    // 写请求后的处理
+                })
+
+            
+            今天学习目标，学会套axios公式，发送请求！
+            
+
+
+            前后端交互需求：
+                    ！！！注意：我们是以前端的角度去进行交互，而不是后端，咱们暂时没有学习后端。！！！
+                    交互步骤：
+                        -   步骤一、创建请求对象
+                        -   步骤二、请求方式
+                        -   步骤三、请求接口地址
+                        -   步骤四、请求数据
+                        -   步骤五、请求结果处理
+            新增方法:
+                    需求一：当在输入框输入了用户昵称和年龄后，点击新增按钮，能够实现用户新增
+                    需求二：新增完后触发自动查询
+            删除方法:
+                    需求一：用户从输入框输入 用户 id 后，点击删除按钮，可以对该条信息进行删除操作
+                    需求二：删除完后触发自动查询
+            修改方法:
+                    需求一：当用户输入 被更改用户 id 和 修改后的用户昵称信息后 ，点击修改按钮，能够修改成功
+                    需求二：修改完后触发自动查询
+            查询方法:
+                    需求一：当用户点击查询按钮，能够查询的到目前服务器中保存的所有用户信息
+        */
+    </script>
+</body>
+
+</html>

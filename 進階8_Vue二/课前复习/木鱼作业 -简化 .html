@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>敲木鱼</title>
+    <script src="../包/vue.js"></script>
+    <style>
+        body {
+            padding: 0px;
+            /*内边距*/
+            margin: 0px;
+            /*外边距*/
+        }
+
+        #box1 {
+            width: 100%;
+            height: 100vh;
+            background-color: black;
+            /*声明flex布局*/
+            display: flex;
+        }
+
+        .box1_01 {
+            margin: auto;
+        }
+
+        #gongDe {
+            font-family: 楷体;
+            font-size: 80px;
+            color: white;
+        }
+
+        #vip {
+            margin: 50px 120px;
+            /* 50是上下边距  120是左右边距*/
+            border-radius: 80%;
+            width: 80px;
+            height: 80px;
+            background-color: green;
+            color: white;
+        }
+
+        #stop {
+            margin: 50px 120px;
+            /* 50是上下边距  120是左右边距*/
+            border-radius: 80%;
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 创建一个flex容器 -->
+    <div id="box1">
+        <!-- 创建一个flex -->
+        <div class="box1_01">
+            <img @click="img_click" id="button"
+                src="https://pic.rmb.bdstatic.com/bjh/down/78df3a803bf943b4853a8b5d587dfdd0.gif">
+            <br><!-- 图片和按钮都是块级标签 -->
+            <div id="gongDe">
+                功德:
+                <span>{{gd_num}}</span>
+            </div>
+            <!-- 用v-show设置代码显示影藏 -->
+            <button id="vip" @click="vip_stop_click" v-show="vip_bool">VIP全自动</button>
+            <button id="stop" @click="vip_stop_click" v-show="stop_bool">STOP</button>
+
+            <h1 style="color: aliceblue;">{{test_val}}</h1>
+            <button @click="clear">归零</button>
+        </div>
+    </div>
+
+
+    <script>
+        /*
+            需求一: 实现点击图片,让功德数字+1
+            需求二: 新增一个电脑托管按钮,实现让电脑帮我们敲（定时器）
+            需求三: 新建一个停止vip功能
+            拓展: 利用clearInterval函数实现让定时器停下来。
+        */
+        new Vue({
+            el: "#box1",
+            data: {    // 数据源
+                test_val: "Hello World!",
+                gd_num: 10000,    // 用于存储功德数字
+                Int_id: null,      // 用于存储定时器标识
+                vip_bool: true,   // 用于保存vip按钮显示状态,初始状态是显示的
+                stop_bool: false   // 用于保存stop按钮显示状态,初始状态是不显示的
+            },
+            methods: {   // 方法区
+                img_click() {
+                    this.gd_num++   // 1？调用Vue对象数据源中的存储的功德数据，并让其自增+1
+                },
+                vip_stop_click(){
+                    // 让vip\stop显示状态进行反转
+                    this.vip_bool = !this.vip_bool
+                    this.stop_bool = !this.stop_bool
+                    // 当vip按钮没有被点击的时候，this.Int_id是空的
+                    // 只要触发了vip按钮，this.Int_id就是有数据的，那接着就只能进行点击stop按钮
+                    if(this.Int_id==null){
+                        this.Int_id = setInterval(() => {
+                            this.gd_num++
+                        }, 500)
+                        // 打印定时器标识（测试）
+                        console.log(this.Int_id);
+                    }else{
+                        clearInterval(this.Int_id)      // clearInterval(定时器的标识)
+                        // 打印定时器标识（测试）
+                        console.log(this.Int_id);
+                        // 清除定时器值(恢复初始状态)
+                        this.Int_id = null
+                    }
+                },
+                clear(){
+                    this.gd_num = 0
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

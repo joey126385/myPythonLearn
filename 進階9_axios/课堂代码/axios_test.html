@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>axios_快速上手</title>
+    <!-- 引入Vue -->
+    <script src="../包/vue.js"></script>
+    <!-- 引入axios -->
+    <script src="../包/axios.js"></script>
+</head>
+
+<body>
+    <!-- 当点击查询的时候，能向指定服务器上的程序的查询功能发起请求,并将查询的结果在页面上渲染 -->
+    <div id="box">
+        <h1 style="color: red;">{{val}}</h1>
+        <button @click="b_click">点我查询</button>
+        <!-- 新增渲染查询到的数据的代码 -->
+        <!-- <h6 style="color:blue;">{{new_val}}</h6> -->
+        <!-- 语法：v-for="(迭代变量,索引变量) in 可迭代数据" :key="索引变量" -->
+        <ul>
+            <li v-for="(i,index) in new_val" :key="index">
+                <span>编号：</span>{{i.id}}
+                <span>姓名：</span>{{i.name}}
+                <span>年龄：</span>{{i.age}}
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        // 用于写js 
+        new Vue({
+            el : "#box",    // 挂载
+            data : {     // 数据源
+                val : "Hello Vue!",
+                new_val : null          // 用于接受查询到的数据
+            },
+            methods : {     // 方法区
+                b_click(){
+                    alert(111111111)
+                    // 向指定服务器上的程序的查询功能发起请求 【axios】
+                    axios({
+                        method : 'get',       // 请求方式
+                        url : "http://43.136.104.16:3002/chaxun"    // 请求地址
+                    }).then((res)=>{
+                        console.log(res.data);
+                        // res.data 存储的服务器返回的信息，如果渲染到页面上去
+                        this.new_val = res.data
+                    })
+                }
+            }
+        })
+        /*
+        -   步骤一、创建请求对象
+        -   步骤二、请求方式
+        -   步骤三、请求接口地址
+        -   步骤四、请求数据
+        -   步骤五、请求结果处理
+
+        语法:
+            axios({
+                method: "get",
+                url: "请求接口地址",
+                params: {
+                    // params 只适合携带 get请求参数
+                }
+            }).then((res) => {
+                // 打印相应结果并进行操作
+                console.log(res);
+            })
+        */
+    </script>
+</body>
+
+</html>

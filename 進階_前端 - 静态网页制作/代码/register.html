@@ -1,0 +1,88 @@
+<!-- 声明文档类型 -->
+<!DOCTYPE html>
+
+<!-- html用于包裹网页代码 -->
+<!-- 在html中我们可以为许多标签，在需要的情况下设置属性，属性一般以 属性名="值" 这样的格式存在 -->
+<html lang="en">
+    <!-- 网页头部 -->
+    <head>
+        <meta charset="UTF-8">
+        <title>注册</title>
+        <link rel="stylesheet" href="./resCSS.css">
+        <script src="../包/vue.js"></script>
+        <script src="../包/axios.js"></script>
+    </head>
+    <!-- 网页主体 -->
+    <body>
+        <div id="box">
+            <!-- 申明flex容器 -->
+            <!-- 如果设置了一个div为flex容器的情况下，这个容器最好要设置一下宽高 -->
+            <div id="center">
+                <!-- 容器中的内容默认为flex项目 -->
+                <div class="box1" @click="reg">欢迎来到我的网站！{{test_val}}</div>
+                <!-- 由于需要进行注册，注册的时候都需要采集用户信息，因此写两个表单标签用于进行信息采集 -->
+                <!-- v-show 是Vue提供的一个通过设置布尔值来控制html代码显示状态的 -->
+                <div class="box2" v-show="reg_bool">
+                    <span>昵称</span>   <input v-model="user_name" type="text" placeholder="请输入账户昵称">
+                </div>
+                <div class="box2" v-show="reg_bool">
+                    <span>年龄</span>   <input v-model="user_age" type="number" placeholder="请输入你的年龄">
+                </div>
+                {{user_name}}{{user_age}}
+                <div class="box2" v-show="reg_bool">
+                    <button @click="regster">注册</button>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // 创建Vue对象，并进行属性设置
+            new Vue({
+                el: "#box",
+                data : {
+                    test_val : "Hello PEOPLE!",
+                    reg_bool : false ,
+                    user_name : null ,
+                    user_age : null
+                },
+                methods : {         // 方法区
+                    reg(){
+                        // 切换 reg_bool 值，让注册区域代码进行显示  
+                        // this 代表当前Vue对象本身，如果说要在Vue中调用自身对象的一些数据或者方法，可以直接通过this去调用
+                        this.reg_bool = !this.reg_bool
+                    },
+                    regster(){
+                        console.log(`用户名：${this.user_name}，用户年龄${this.user_age}`);
+                        // 提交注册信息 --- 提交到服务器（指定的云上电脑）
+                        axios({
+                            method : 'post',
+                            url : 'http://43.136.104.16:3002/xinzeng',
+                            data : {
+                                name : this.user_name,
+                                age : this.user_age
+                            }
+                        }).then((res)=>{
+                            console.log(res.data.message);
+                            // 课后作业：需求升级，请在新增成功之后，再增加自动查询的功能，将查询的数据结果进行打印在控制台
+                            if(res.data.message=="新增用户成功"){
+                                this.sel()
+                            }
+                        })
+                    },
+                    sel(){
+                        //写查询的代码
+                        console.log("模拟查询");
+                    }
+                }
+            })
+            
+
+            console.log("hello JS!");
+            // Array
+            let a1 = [1,2,3,"hello JS!"]
+            //Object 
+           let o1 = {name : "不渝" , age : 18}
+
+        </script>
+    </body>
+</html>

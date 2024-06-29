@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div class="box">
+        <div>我是被操纵的div</div>
+        <!-- 需求：当点击按钮的时候，上面被操作的div能够发生变化 -->
+        <button @click="change()">点我</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '.box',
+            methods: {
+                change() {
+                    // this.$refs.自定义的ref标识符.style.样式属性 = 样式属性值
+                    // 获取dom元素并改变样式
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
