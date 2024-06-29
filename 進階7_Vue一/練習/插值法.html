@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>vue 1</title>
+    <!--步驟一 導入js-->
+    <script src="../包/vue.js"></script>
+  </head>
+  <body>
+    <!--步驟三  建立標籤-->
+    <h1>第一種方式:插值法</h1>
+    <div id="container">
+      <!--步驟五  透過{{}}方式 綁定 某個數據-->
+      方式一、插值法
+      <h1>{{text_val1}}</h1>
+      <hr />
+      方式二、雙向綁定法 使用 v-model 來綁定
+      <input v_model="userName" placeholder="輸入用戶名" />
+      <input
+        v_model="userPass"
+        type="password"
+        placeholder="輸入用戶密碼"
+      /><br />
+      {{userName}}<br />
+      {{userPass}}
+
+      <hr />
+      方式三、事件邦定法 使用 @click 來調用 methods 的方法
+      <button @click="click_func">登入</button>
+      <hr />
+      方式四、使用列表喧染法 使用 v-for
+      <ul>
+        <li v-for="(i,index) in userList" :key="index">
+          {{i}}
+          <span style="background-color: brown">{{i.id}}</span>
+          <span style="background-color: blue">{{i.name}}</span>
+          <span style="background-color: aqua">{{i.age}}</span>
+        </li>
+      </ul>
+    </div>
+
+    <script>
+      //步驟二  建立 Vue 對象
+      let v1 = new Vue({
+        //步驟四    用  el綁定標籤
+        el: "#container",
+        //步驟五    使用 data 放入數據
+        data: {
+          text_val1: "hellow",
+          userName: null,
+          userPass: null,
+          userList: [
+            { id: 1, name: "aaa", age: 11 },
+            { id: 2, name: "bbb", age: 22 },
+            { id: 3, name: "ccc", age: 33 },
+            { id: 4, name: "ddd", age: 44 },
+            { id: 5, name: "eee", age: 55 },
+          ],
+        },
+        //步驟六  綁定事件
+        methods: {
+          click_func() {
+            alert(`用户名：${this.userName}，用户密码${this.userPass}`);
+            console.log(`用户名：${this.userName}，用户密码${this.userPass}`);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Document</title>
-        <!-- 0、将 vue.js包 准备好放 代码文件旁边（这个Vue包我下课后会发给各位同学，群公告链接的笔记里面也可以下载） -->
-        <!-- 1、引入Vue -->
-        <script src="../包/vue.js"></script>
-    </head>
-    <body>
-        <div id="box">
-            <!-- 插值渲染法，功能是通过{{}}直接渲染该段html绑定的Vue对象数据源中的某个数据 -->
-            {{text_val}}
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <!-- 0、将 vue.js包 准备好放 代码文件旁边（这个Vue包我下课后会发给各位同学，群公告链接的笔记里面也可以下载） -->
+    <!-- 1、引入Vue -->
+    <script src="../包/vue.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <!-- 插值渲染法，功能是通过{{}}直接渲染该段html绑定的Vue对象数据源中的某个数据 -->
+      {{text_val}}
+    </div>
 
-        <!-- 3、创建Vue对象 -->
-        <!-- 注意：js代码写在script标签中（自己写的js代码一般情况下建议放在html代码后面） -->
-        <script>
-            // 一般情况下Vue创建后是需要手动关联与html代码的联系的，并且一般建议关联在除了body之外的最大的哪个标签上
-            // 在创建Vue对象之后，可以使用一些选项值，为这个Vue对象进行设置，这些选项值名字是固定的。
-            let v1 = new Vue({
-                el : "#box", // 挂载到某个标签
-                data : {     // Vue数据源
-                    text_val : "hello Vue!"
-                }
-            })
-            
-        </script>
-    </body>
+    <!-- 3、创建Vue对象 -->
+    <!-- 注意：js代码写在script标签中（自己写的js代码一般情况下建议放在html代码后面） -->
+    <script>
+      // 一般情况下Vue创建后是需要手动关联与html代码的联系的，并且一般建议关联在除了body之外的最大的哪个标签上
+      // 在创建Vue对象之后，可以使用一些选项值，为这个Vue对象进行设置，这些选项值名字是固定的。
+      let v1 = new Vue({
+        el: "#box", // 挂载到某个标签
+        data: {
+          // Vue数据源
+          text_val: "hello Vue!",
+        },
+      });
+    </script>
+  </body>
 </html>
