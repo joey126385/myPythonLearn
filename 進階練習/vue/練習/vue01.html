@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--步驟一  :   引入vue 包-->
+    <script src="../vue包/vue.js"></script>
+  </head>
+
+  <body>
+    <!--步驟二  : 建立區塊給 vue來綁定-->
+    <div id="box">{{textVal}}</div>
+    <script>
+      //步驟三    : 建立 vue對象
+      new Vue({
+        el: "#box", //綁定標籤
+        data: {
+          //賦值
+          textVal: "123",
+        },
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../vue包/vue.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <button @click="add()">點選商品</button>
+      <h3>當前訂單總數:{{price}}</h3>
+      <h3>當前訂單總價:{{total}}</h3>
+    </div>
+    <script>
+      new Vue({
+        el: "#box",
+        data: {
+          price: 0,
+        },
+        methods: {
+          add() {
+            // alert(111);
+            this.price++;
+          },
+        },
+        computed: {
+          //計算屬性區域
+          total() {
+            return this.price * 100;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

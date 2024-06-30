@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../vue包/vue.js"></script>
+  </head>
+  <body>
+    <div id="box">
+      <button v-show="vip_bool" @click="action()">vip</button>
+      <button v-show="stop_bool" @click="action()">stop</button>
+    </div>
+
+    <script>
+      new Vue({
+        el: "#box",
+        data: {
+          vip_bool: false,
+          stop_bool: true,
+        },
+        methods: {
+          action() {
+            //alert(123);
+            this.vip_bool = !this.vip_bool;
+            this.stop_bool = !this.stop_bool;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
