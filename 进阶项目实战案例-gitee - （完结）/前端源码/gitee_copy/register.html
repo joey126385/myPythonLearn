@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>注册界面</title>
+
+    <!-- 引入 网页主体 css文件 -->
+    <link rel="stylesheet" href="./css/register/网页主体(背景).css">
+    <!-- 引入 网页主体内容区 css文件 -->
+    <link rel="stylesheet" href="./css/register/网页主体内容区.css">
+    <!-- 引入 主体区域左侧广告区 css文件 -->
+    <link rel="stylesheet" href="./css/register/主体左侧广告区.css">
+    <!-- 引入 主体区域右侧注册区域 css文件 -->
+    <link rel="stylesheet" href="./css/register/主体右侧注册区.css">
+
+    <!-- 引入 Vue 包 -->
+    <script src="./js/vue.js"></script>
+    <!-- 引入 axios 包 -->
+    <script src="./js/axios.js"></script>
+
+    <style>
+        /* 去掉网页白边 */
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 实现一个页面居中效果 -->
+    <!-- 1、创建一个flex容器 -->
+    <div id="box0">
+
+        <!-- 主体内容区域（用于布局的） - 开始  -->
+        <div id="box1">
+
+            <!-- 主体区域左侧广告区 - 开始  -->
+            <div class="box1_flex" id="box1_01">
+                <div id="box1_01_center">
+
+                    <img src="./img/register/logo.svg" width="40%" height="40%">
+
+                    <p id="box1_01_title">企业级 DevOps 研发管理平台</p>
+
+                    <div id="box1_01_jianjie_box">
+                        <div style="margin-top: 46px;">
+                            <span style="color: #a2adbe;;font-size: 15px;">王安</span>
+                            <span style="color: #a2adbe;;font-size: 15px;margin-left: 15px;">DCloud CEO</span>
+                        </div>
+                        <div id="box1_01_jianjie">
+                            不少国内的好产品，因为用户的迷外心理而不被重视。其实一个友好的中文界面，
+                            可以让用户快速掌握软件的所有功能，实实在在地提升效率。
+                            期待更多开发者能重视 Gitee，重视国内认真做事的产品团队，他们会给你惊喜。
+                        </div>
+
+                    </div>
+                    <div style="width: 360px;">
+                        <img src="./img/register/register_line.png" width="100%" height="100%">
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <a target="_blank" href="">
+                            <span style="font-size: 15px;font-weight: 700;color: white">Gitee 企业版</span>
+                            <span style="font-size: 15px;color: white;margin-left: 5px;margin-right: 5px;"> - </span>
+                            <span style="font-size: 15px;color: white">企业级 DevOps 研发管理平台</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 主体区域左侧广告区 - 结束  -->
+
+
+            <!-- 主体区域右侧注册区域 - 开始 -->
+            <div class="box1_flex">
+                <div id="box1_02">
+                    <div>
+                        <span id="box1_02_title">注册</span>
+                        <span id="yes_zhagnhao">已有账号？</span>
+                        <a id="denglu" href="./login.html">点此登录</a>
+                    </div>
+
+                    <div class="input_box">
+                        <input v-model="user_name" class="register_input" type="text" placeholder=" 姓名">
+                    </div>
+
+                    <div class="input_box">
+                        <div id="personal_space">
+                            <span style="margin: auto;">https://gitee.com/</span>
+                        </div>
+                        <div id="personal_space_inputBox">
+                            <input v-model="user_type" class="personal_space_register_input" type="password"
+                                placeholder=" 0游客、1用户、2超管">
+                        </div>
+
+                    </div>
+
+                    <div class="input_box">
+                        <input v-model="user_tel" class="register_input" type="password" placeholder=" 请输入手机号码">
+                    </div>
+
+                    <div class="input_box">
+                        <input v-model="user_pass" class="register_input" type="password" placeholder=" 密码不少于6位数">
+                    </div>
+
+                    <div class="input_box">
+                        <input type="checkbox">
+                        <span class="checkbox_msg1">我已阅读并同意</span>
+                        <span class="checkbox_msg2">使用条款</span>
+                        <span class="checkbox_msg1">及</span>
+                        <span class="checkbox_msg2">非活跃帐号处理规范</span>
+                    </div>
+
+                    <div class="input_box">
+                        <button @click="register" id="register_button">注册</button>
+                    </div>
+
+                    <div style="margin: 50px 0px 20px 0px; display: flex;">
+                        <a style="margin: auto;" href="https://gitee.com/auth/oschina">
+                            <img src="./img/register/开源中国.png">
+                        </a>
+                    </div>
+
+                    <div style="display: flex;">
+                        <div style="flex: 2;">
+                            <hr>
+                        </div>
+                        <span style="flex: 1.2; color: grey; font-size: 14px">
+                            其他方式登录
+                        </span>
+                        <div style="flex: 2;">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div class="input_box">
+                        <div class="other_register">
+                            <img class="logo" src="./img/register/阿里云logo.png">
+                        </div>
+                        <div class="other_register">
+                            <img class="logo" src="./img/register/gitlab_logo.png">
+                        </div>
+                        <div class="other_register">
+                            <img class="logo" src="./img/register/华为logo.png">
+                        </div>
+                        <div class="other_register">
+                            <img class="logo" src="./img/register/gitHub_logo.png">
+                        </div>
+                        <div class="other_register">
+                            <img class="logo" src="./img/register/其他logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主体区域右侧注册区域 - 结束 -->
+
+        </div>
+        <!-- 主体内容区域 - 结束 -->
+
+
+        <!-- 背景图片-开始 -->
+        <div id="background_left">
+            <img src="./img/register/register_bg-left.webp">
+        </div>
+        <div id="background_right">
+            <img src="./img/register/register_bg-right.webp">
+        </div>
+        <!-- 背景图片-结束 -->
+    </div>
+
+    <script>
+        new Vue({
+            el: '#box0',
+            data: {
+                user_name: null,
+                user_type: null,    // 【用户权限, 0游客、1会员、2超管】
+                user_tel: null,
+                user_pass: null
+            }, methods: {
+                register() {
+                    // 测试代码，看看能不能获取数据
+                    console.log(this.user_name, this.user_type, this.user_tel, this.user_pass);
+                    // 调用注册接口，注册成功后，跳转登录界面
+                    // 当前页面跳转代码： window.location.href = './login.html'
+                    axios({
+                        method: 'post',
+                        url: 'http://127.0.0.1:5000/register',
+                        data: {
+                            user_name: this.user_name,
+                            user_type: this.user_type,    
+                            user_tel: this.user_tel,
+                            user_pass: this.user_pass
+                        }
+                    }).then((res) => {
+                        console.log(res);
+                        // 如何接口返回 数据为 yes ,就去登录，否则就重新注册
+                        if(res.data=='yes'){ 
+                            window.location.href = './login.html'
+                        }else{
+                            alert("请重新注册")
+                        }
+                    })
+                    // 情况输入框，恢复原始状态
+                    this.user_name = null
+                    this.user_type = null
+                    this.user_tel = null
+                    this.user_pass = null
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

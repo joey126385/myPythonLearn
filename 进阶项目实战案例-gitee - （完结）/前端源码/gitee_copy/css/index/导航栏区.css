@@ -1,0 +1,116 @@
+/* 导航栏css开始 */
+
+#navigation_bar {
+    height: 100px;
+    /* background-color: blue; 测试代码 */
+    /*测试代码*/
+    display: flex;
+}
+
+#bar {
+    height: 36%;
+    width: 100%;
+    margin: auto;
+    /* 水平居中 */
+    /* background-color: azure;    测试代码 */
+    display: flex;
+}
+
+
+#bar1 {
+    flex: 1.2;
+    display: flex;
+}
+
+#gitee_logo {
+    max-width: 90%;
+    max-height: 100%;
+}
+
+#bar2 {
+    flex: 0.8;
+    display: flex;
+}
+
+#bar3 {
+    flex: 0.8;
+    display: flex;
+}
+
+#bar4 {
+    flex: 0.8;
+    display: flex;
+}
+
+#bar5 {
+    flex: 0.8;
+    display: flex;
+}
+
+#bar6 {
+    flex: 1;
+    display: flex;
+}
+
+.bar_title {
+    margin: auto;
+}
+
+#bar7 {
+    flex: 6.8;
+}
+
+#bar8 {
+    flex: 1.5;
+    display: flex;
+}
+
+#bar_input {
+    width: 100%;
+    height: 90%;
+    border: none;
+    /* 设置边框无 */
+    border-radius: 5px 5px 5px 5px;/* 设置不同角的圆角半径 */
+    background-color: rgba(237, 242, 248, 0.808);
+    /*设置背景颜色的透明度，前三个参数 0, 0, 255 分别代表红色、绿色和蓝色的值，最后一个参数 0.5 是透明度的值*/
+}
+
+input:focus {
+    outline: 2px solid dodgerblue;
+    /* 设置蓝光样式 */
+}
+
+#bar9 {
+    flex: 0.5;
+    display: flex;
+}
+
+#bar_login_but {
+    border: none;
+    /* 设置边框无 */
+    background-color: transparent;
+    /* 设置背景颜色为透明 */
+}
+
+#bar_login_but:hover {
+    color: blue;
+    /* 设置按钮鼠标悬停时的背景颜色为蓝色 */
+}
+
+#bar10 {
+    flex: 0.5;
+    display: flex;
+}
+
+#bar_register_but {
+    color: aliceblue;
+    border: none;
+    /* 设置边框无 */
+    background-color: dodgerblue;
+    /* 设置背景颜色为蓝色 */
+    border-radius: 5px 5px 5px 5px;
+    /* 设置不同角的圆角半径 */
+
+}
+
+/* 导航栏css结束 */

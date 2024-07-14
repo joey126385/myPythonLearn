@@ -1,0 +1,30 @@
+/* 主体区域左侧介绍信息 */
+#box1_01 {
+    background: linear-gradient(0deg, #3a485a 0%, #607089 100%);
+    display: flex;
+}
+
+/* 左侧介绍信息居中盒子 */
+#box1_01_center {
+    margin: auto;
+}
+
+/* 左侧标题 */
+#box1_01_title {
+    color: white;
+    font-size: 20px;
+}
+
+/* 简介内容区域 */
+#box1_01_jianjie_box {
+    width: 360px;
+    height: 250px;
+}
+
+/* 简介文本内容 */
+#box1_01_jianjie {
+    margin-top: 16px;
+    line-height: 1.71429;
+    font-size: 14px;
+    color: #fff;
+}

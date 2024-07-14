@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <!-- 引入 导航栏区 css文件 -->
+    <link rel="stylesheet" href="./css/index/导航栏区.css">
+    <!-- 引入 网站简介区 css文件 -->
+    <link rel="stylesheet" href="./css/index/网站简介区.css">
+    <!-- 引入 项目按钮区 css文件 -->
+    <link rel="stylesheet" href="./css/index/项目按钮区.css">
+    <!-- 引入 分割线 css文件 -->
+    <link rel="stylesheet" href="./css/index/分割线.css">
+    <!-- 引入 项目介绍区 css文件 -->
+    <link rel="stylesheet" href="./css/index/项目介绍区.css">
+
+    <!-- 引入 Vue 包 -->
+    <script src="./js/vue.js"></script>
+
+    <style>
+        /* 去掉浏览器自带样式 */
+        body {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /* 网页区域（网页内容背景） */
+        #background_001 {
+            /* background: linear-gradient(blue, pink); */
+            background: linear-gradient(rgba(59, 130, 246, .5), white);
+            height: 100vh;
+            width: 100%;
+        }
+
+        /* 网页主题内容区域 */
+        #center {
+            height: 100%;
+            width: 95%;
+            margin: 0 auto;
+            /* 水平居中 */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 网页区域-开始(css已实现渐变背景) -->
+    <div id="background_001">
+
+        <!-- 主题内容区域-开始(css中已居中显示) -->
+        <div id="center">
+
+            <!-- 导航栏总区开始   ---   css已设置居中排版 -->
+            <div id="navigation_bar">
+                <!-- 导航栏内容区开始  - flex纵向布局 -->
+                <div id="bar">
+
+                    <!-- 导航栏具体模块开始 -->
+                    <div id="bar1">
+                        <img id="gitee_logo" src="./img/index/gitee_logo.svg">
+                    </div>
+                    <div id="bar2">
+                        <div class="bar_title">开源</div>
+                    </div>
+                    <div id="bar3">
+                        <div class="bar_title">产品</div>
+                    </div>
+                    <div id="bar4">
+                        <div class="bar_title">案例</div>
+                    </div>
+                    <div id="bar5">
+                        <div class="bar_title">价格</div>
+                    </div>
+                    <div id="bar6">
+                        <div class="bar_title">服务与支持</div>
+                    </div>
+                    <div id="bar7"></div>
+                    <div id="bar8">
+                        <input class="bar_title" id="bar_input" type="text" placeholder=" 搜开源">
+                    </div>
+                    <div id="bar9">
+                        <button class="bar_title" id="bar_login_but" @click="login">登录</button>
+                    </div>
+                    <div id="bar10">
+                        <button class="bar_title" id="bar_register_but" @click="register">注册</button>
+                    </div>
+                    <!-- 导航栏具体模块结束 -->
+
+                </div> <!-- 导航栏内容区结束 -->
+            </div> <!-- 导航栏总区结束 -->
+
+
+            <!-- 网站简介区 -开始 -->
+            <div id="font_box">
+                <!-- 小字体部分 -->
+                <div class="small_font">
+                    <div id="play">
+                        <span id="paly_font">助力企业数字化转型，提升工程研发效能</span>
+                        <img src="./img/index/icon-play.svg">
+                    </div>
+                </div>
+                <!-- 大、渐变字体部分 -->
+                <div id="big_font">
+                    <div id="play">
+                        <span id="change_font1">DevOps</span>
+                        <span id="change_font2">一站式研发效能平台</span>
+                    </div>
+                </div>
+                <!-- 小字体部分 -->
+                <div class="small_font">
+                    <div id="play">
+                        <div>26 万企业的研发心选，协作代码仓库达 2500 万以上</div>
+                    </div>
+                </div>
+                <!-- 小字体部分 -->
+                <div class="small_font">
+                    <div id="play">
+                        <div>满足信创产业推广要求及评估标准</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- 网站简介区 -结束 -->
+
+
+            <!-- 项目按钮区开始 -->
+            <div id="project_box">
+                <div id="project_center">
+
+                    <div class="project">
+                        <div class="project_img">
+                            <img style="margin: auto;" src="./img/index/icon-project01.svg">
+                        </div>
+                        <div class="project_font">
+                            <span style="margin: auto;">项目协同</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project_img">
+                            <img style="margin: auto;" src="./img/index/icon-project02.svg">
+                        </div>
+                        <div class="project_font">
+                            <span style="margin: auto;">代码管理</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project_img">
+                            <img style="margin: auto;" src="./img/index/icon-project03.svg">
+                        </div>
+                        <div class="project_font">
+                            <span style="margin: auto;">代码扫描</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project_img">
+                            <img style="margin: auto;" src="./img/index/icon-project04.svg">
+                        </div>
+                        <div class="project_font">
+                            <span style="margin: auto;">持续集成</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project_img">
+                            <img style="margin: auto;" src="./img/index/icon-project05.svg">
+                        </div>
+                        <div class="project_font">
+                            <span style="margin: auto;">代码扫描</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project_img">
+                            <img style="margin: auto;" src="./img/index/icon-project06.svg">
+                        </div>
+                        <div class="project_font">
+                            <span style="margin: auto;">多云部署</span>
+                        </div>
+                    </div>
+
+                    <div class="project">
+                        <div class="project_img">
+                            <img style="margin: auto;" src="./img/index/icon-project07.svg">
+                        </div>
+                        <div class="project_font">
+                            <span style="margin: auto;">效能度量</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div> <!-- 项目按钮区结束 -->
+
+
+            <!-- 分割线开始 -->
+            <div id="hr_box">
+                <div id="hr_center">
+                    <hr>
+                </div>
+            </div> <!-- 分割线结束 -->
+
+
+            <!-- 项目介绍区域 -开始  -->
+            <div id="project_msg_box">
+                <!-- 居中内容区-开始 -->
+                <div id="project_msg_center">
+                    <div id="msg_font_box">
+                        <!-- 用于居中 -->
+                        <div class="msg_center">
+                            <h2>代码管理</h2>
+                            <p>支持第三方仓库一键导入，无缝迁移至 Gitee</p>
+                            <p>安全可靠的代码资产保障，存储可靠性达到 99.99%</p>
+                            <p>通过 PR 和 CR 多种模式进行协作协作，提供便捷规范的代码评审流程</p>
+                            <div id="msg_button">
+                                <div id="msg_button_center">
+                                    <a href="https://gitee.com/enterprises/new" target="_blank">
+                                        <button class="msg_button_00" id="msg_button_01"><span>企业版免费注册</span></button>
+                                    </a>
+                                    <a href="https://gitee.com/#professional-presence-submit">
+                                        <button class="msg_button_00" id="msg_button_02"
+                                            type="button"><span>专业版预约演示</span></button>
+                                    </a>
+                                </div>
+                            </div>
+                            <br>
+                            <a href="https://gitee.com/enterprises/code" target="_blank">
+                                <span style="color: dodgerblue; font-size: 18px;">
+                                    了解更多>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div id="msg_img_box">
+                        <div class="msg_center">
+                            <div id="msg_img"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 居中内容区-结束 -->
+            </div> <!-- 项目介绍区域 -结束  -->
+
+
+        </div> <!-- 主题内容区域-结束(css中已居中显示) -->
+    </div> <!-- 网页区域-结束(css已实现渐变背景) -->
+
+
+    <script>
+        // 实现点击登录或者注册按钮，跳转对应界面
+        new Vue({
+            el : '#background_001',
+            methods : {
+                login(){
+                    // 在新的标签页中打开新的网页
+                    window.open('./login.html', '_blank');
+                },register(){
+                     // 在新的标签页中打开新的网页
+                     window.open('./register.html', '_blank');
+                }
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>

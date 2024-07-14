@@ -1,0 +1,15 @@
+/* 分割线css开始 */
+#hr_box {
+    width: 100%;
+    height: 20px;
+    /* background-color: #ff0000; */
+    display: flex;
+}
+
+#hr_center {
+    width: 70%;
+    margin: auto;
+    /* background-color: #000080; */
+}
+
+/* 分割线css结束 */

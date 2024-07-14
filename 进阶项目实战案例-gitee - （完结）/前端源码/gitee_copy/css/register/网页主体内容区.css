@@ -1,0 +1,23 @@
+/* 主体内容区域（用于布局的） */
+
+#box1 {
+    /* 设置flex容器的大小 */
+    width: 1000px;
+    height: 700px;
+    background-color: white;  
+    /* 设置一个外边距自动的属性 ，该属性结合 flex布局可以实现一个快速居中的效果 */
+    margin: auto;
+    /* 申明当前盒子 为 flex容器 */
+    display: flex;
+    z-index: 1; /* 设置z-index值，这个值比背景层大,让该div置于背景层上方 */
+    box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.1); /* 水平偏移 垂直偏移 模糊半径 扩散半径 阴影颜色 */
+}
+
+.box1_flex {
+    flex: 1;
+    /* 这个 盒子 要占总空间的 一份*/
+    /* border-style: solid; */
+    /*设置实心边框*/
+    display: flex;
+}
+

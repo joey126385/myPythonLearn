@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <!-- 引入 网页主体 css文件 -->
+    <link rel="stylesheet" href="./css/login/网页主体(背景).css">
+    <!-- 引入 网页主体内容区 css文件 -->
+    <link rel="stylesheet" href="./css/login/网页主体内容区.css">
+    <!-- 引入 主体区域左侧广告区 css文件 -->
+    <link rel="stylesheet" href="./css/login/主体左侧广告区.css">
+    <!-- 引入 主体区域右侧登录区域 css文件 -->
+    <link rel="stylesheet" href="./css/login/主体右侧登录区.css">
+
+    <!-- 引入 Vue 包 -->
+    <script src="./js/vue.js"></script>
+    <!-- 引入 axios 包 -->
+    <script src="./js/axios.js"></script>
+
+    <style>
+        /* 去掉网页白边 */
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: Arial, sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 实现一个页面居中效果 -->
+    <!-- 1、创建一个flex容器 -->
+    <div id="box0">
+
+        <!-- 主体内容区域（用于布局的） - 开始  -->
+        <div id="box1">
+
+            <!-- 主体区域左侧广告区 - 开始  -->
+            <div class="box1_flex" id="box1_01">
+                <div id="box1_01_center">
+
+                    <img src="./img/login/logo.svg" width="40%" height="40%">
+
+                    <p id="box1_01_title">企业级 DevOps 研发管理平台</p>
+
+                    <div id="box1_01_jianjie_box">
+                        <div style="margin-top: 46px;">
+                            <span style="color: #a2adbe;font-size: 14px;">贤心</span>
+                            <span style="color: #a2adbe;font-size: 14px;margin-left: 15px;">layui</span>
+                        </div>
+                        <div id="box1_01_jianjie">
+                            Gitee 已成为我工作的依赖，从个人私有库到企业版，每一项解决方案都直击痛点。
+                            而它更吸引人的，是开放的姿态和优质的本土化基因。告诉世界：我们在自豪地使用 Gitee！
+                        </div>
+
+                    </div>
+                    <div style="width: 360px;">
+                        <img src="./img/login/login_line.png" width="100%" height="100%">
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <a target="_blank" href="">
+                            <span style="font-size: 15px;font-weight: 700;color: white">Gitee 企业版</span>
+                            <span style="font-size: 15px;color: white;margin-left: 5px;margin-right: 5px;"> - </span>
+                            <span style="font-size: 15px;color: white">企业级 DevOps 研发管理平台</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 主体区域左侧广告区 - 结束  -->
+
+
+            <!-- 主体区域右侧登录区域 - 开始 -->
+            <div class="box1_flex">
+                <div id="box1_02">
+                    <div>
+                        <span id="box1_02_title">登录</span>
+                        <span id="no_zhagnhao">没有账号</span>
+                        <a id="zhuce" href="./register.html">点此注册</a>
+                    </div>
+
+                    <div class="input_box">
+                        <input v-model="user_account" class="login_input" type="text" placeholder=" 手机/邮箱/个人空间地址">
+                    </div>
+
+                    <div class="input_box">
+                        <input v-model="user_pass" class="login_input" type="password" placeholder=" 请输入密码">
+                    </div>
+
+                    <div class="input_box">
+                        <input type="checkbox">
+                        <span style="color: #414242; font-size: 14px">记住我</span>
+                        <span id="checkbox_msg">短信验证登录</span>
+                    </div>
+
+                    <div class="input_box">
+                        <button @click="login" id="login_button">登录</button>
+                    </div>
+                    <div class="input_box">
+                        <span style="margin: auto;color: #005980;">已有账号，忘记密码</span>
+                    </div>
+
+
+                    <div style="margin: 50px 0px 20px 0px; display: flex;">
+                        <a style="margin: auto;" href="https://gitee.com/auth/oschina">
+                            <img src="./img/login/开源中国.png">
+                        </a>
+                    </div>
+
+                    <div style="display: flex;">
+                        <div style="flex: 2;">
+                            <hr>
+                        </div>
+                        <span style="flex: 1.2; color: grey; font-size: 14px">
+                            其他方式登录
+                        </span>
+                        <div style="flex: 2;">
+                            <hr>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; margin-top: 15px;">
+                        <div class="other_login">
+                            <img class="logo" src="./img/login/阿里云logo.png">
+                        </div>
+                        <div class="other_login">
+                            <img class="logo" src="./img/login/gitlab_logo.png">
+                        </div>
+                        <div class="other_login">
+                            <img class="logo" src="./img/login/华为logo.png">
+                        </div>
+                        <div class="other_login">
+                            <img class="logo" src="./img/login/gitHub_logo.png">
+                        </div>
+                        <div class="other_login">
+                            <img class="logo" src="./img/login/其他logo.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 主体区域右侧登录区域 - 结束 -->
+
+        </div>
+        <!-- 主体内容区域 - 结束 -->
+
+
+        <!-- 背景图片-开始 -->
+        <div id="background_left">
+            <img src="./img/login/login_bg-left.webp">
+        </div>
+        <div id="background_right">
+            <img src="./img/login/login_bg-right.webp">
+        </div>
+        <!-- 背景图片-结束 -->
+    </div>
+
+
+    <script>
+        new Vue({
+            el: '#box0',
+            data: {
+                user_account: null,
+                user_pass: null
+            }, methods: {
+                login() {
+                    console.log(this.user_account, this.user_pass);
+                    // 调用登录接口，登录成功后，携带参数跳转主界面（主界面根据用户级别显示内容）
+                    // 跳转其他页面，并携带参数【 账户昵称 和 账号类型 】
+                    // 语法：
+                    // window.location.href = './home_page.html?user_account=' + this.user_account + '&user_type=' + user_type;
+                    axios({
+                        method: 'get',
+                        url: 'http://127.0.0.1:5000/login',
+                        params: {
+                            user_name: this.user_account,
+                            user_tel: this.user_account,
+                            user_pass: this.user_pass
+                        }
+                    }).then((res) => {
+                        console.log(res);
+                        // 如何接口返回 数据不为 no ,就证明当前 登录成功 获取到了 账户类型数据 
+                        if (res.data != 'no') {
+                            window.location.href = './home_page.html?user_account=' + this.user_account + '&user_type=' + res.data;
+                        } else {
+                            alert("请重新登录")
+                        }
+                        // 情况输入框，恢复原始状态
+                        this.user_account = null
+                        this.user_pass = null
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

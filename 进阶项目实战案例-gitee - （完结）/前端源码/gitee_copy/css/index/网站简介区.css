@@ -1,0 +1,68 @@
+/* play栏css开始 */
+#font_box {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    /* flex 布局,设置垂直方向，从上到下排列*/
+
+}
+
+.small_font {
+    flex: 1;
+    display: flex;
+}
+
+#play {
+    margin: auto;
+    display: flex;
+}
+
+#paly_font {
+    margin: auto;
+    margin-right: 10px;
+}
+
+#big_font {
+    flex: 5;
+    display: flex;
+}
+
+#change_font1 {
+    font-size: 60px;
+    font-weight: 900;
+    background: linear-gradient(to right, #ff0000, #00ff00);    /* 设置背景渐变 */
+    -webkit-background-clip: text;  /* 将背景渐变应用到文字上 */
+    -webkit-text-fill-color: transparent;   /* 将文字颜色设置为透明 */
+    /*  
+        通过设置background属性为一个水平渐变的背景色，
+        然后使用-webkit-background-clip属性将背景渐变应用到文字上，
+        最后使用-webkit-text-fill-color属性将文字颜色设置为透明，实现了字体渐变的效果。
+
+        需要注意的是，
+        -webkit-text-fill-color和-webkit-background-clip是针对WebKit浏览器（如Chrome和Safari）的私有属性，
+        如果要在其他浏览器中实现字体渐变，可能需要使用其他方法或属性。 
+    */
+}
+
+#change_font2 {
+    font-size: 60px;
+    font-weight: 900;
+    background: linear-gradient(to right, #0000ff, #000080);
+    /* 设置背景渐变为深蓝色 */
+    -webkit-background-clip: text;
+    /* 将背景渐变应用到文字上 */
+    -webkit-text-fill-color: transparent;
+    /* 将文字颜色设置为透明 */
+    /* 
+        通过设置background属性为一个水平渐变的背景色，从浅深蓝色#00bfff渐变到深深蓝色#00008b，
+        然后使用-webkit-background-clip属性将背景渐变应用到文字上，
+        最后使用-webkit-text-fill-color属性将文字颜色设置为透明，实现了由浅深蓝到深深蓝的渐变字体效果。
+
+        需要注意的是，
+        -webkit-text-fill-color和-webkit-background-clip是针对WebKit浏览器（如Chrome和Safari）的私有属性，
+        如果要在其他浏览器中实现字体渐变，可能需要使用其他方法或属性。
+    */
+}
+
+/* play栏css结束 */

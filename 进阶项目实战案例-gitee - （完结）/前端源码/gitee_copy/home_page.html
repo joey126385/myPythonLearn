@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+
+    <!-- 引入 Vue 包 -->
+    <script src="./js/vue.js"></script>
+    <!-- 引入 axios 包 -->
+    <script src="./js/axios.js"></script>
+    <style>
+        #box {
+            display: flex;
+            height: 100vh;
+        }
+
+        #box_center {
+            margin: auto;
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <!--通过ref来获取这个dom 取名叫domref -->
+    <div id="box" ref="domref">
+        <h1 id="box_center">
+            {{test_value}}
+        </h1>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#box',
+            data: {    // 数据源
+                test_value: null,     // 用于接收 请求 test接口 响应的数据
+                // 由于【用户权限, 0游客、1会员、2超管】,这里可以利用数组下标原理将数据对应上
+                user_type_list : ['游客','会员','超管'],     // 用于存储账号属性
+                type_color_list : ['blue','yellow','green']         // 用于存储不同类型对应的页面背景颜色
+            }, 
+            watch: {// 侦听器
+                test_value: {    // 由于开启了自动侦听功能因此，该侦听器会在页面刷新时自动触发
+                    handler(newVal, oldVal) {
+                        // 更新后的值 newVal,更新前的值 oldVal
+                        let urlParams = new URLSearchParams(window.location.search)    // 获取地址栏参数集合
+                        let user_account = urlParams.get('user_account')
+                        let user_type = urlParams.get('user_type')
+                        console.log(`${user_account},,,${user_type}`);
+                        // 验证当前用户权限，【用户权限, 0游客、1会员、2超管】，没有权限则提示先登录账号
+                        if(user_type!=0&&user_type!=1&&user_type!=2){
+                            this.test_value = "请先登录！"
+                        }else{
+                            this.test_value = `欢迎“${user_account}”同志,当前你登录的是“${this.user_type_list[user_type]}”账号！`
+                            // this.$refs.domref 找到dom domref 然后通过style.color 设置颜色
+                            //在JavaScript中，使用连字符（-）的CSS属性名需要使用驼峰命名法。
+                            this.$refs.domref.style.backgroundColor = this.type_color_list[user_type]
+                            /* 
+                            注意：由于当前用侦听器实现页面初始化时判断的 方式 不是很规范(项目中一般用Vue钩子函数)
+                            因此，会发生报错，报错的原因可能是因为在页面初始阶段，DOM 元素可能还没有完全渲染。
+                            不过如果不影响使用的话，就先这样，同学们也可以去拓展一下哦~
+                            */
+                        }
+                    },
+                    immediate: true   //  可以控制侦听器自动触发一次 ,默认为false
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

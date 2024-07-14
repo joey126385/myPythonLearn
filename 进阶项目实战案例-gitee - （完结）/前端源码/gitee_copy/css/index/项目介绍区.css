@@ -1,0 +1,84 @@
+/* 项目介绍区 css 开始 */
+#project_msg_box {
+    width: 100%;
+    height: 450px;
+    /* background-color: #ff0000;  用于布局的测试代码*/
+    display: flex;
+}
+
+#project_msg_center {
+    width: 70%;
+    height: 450px;
+    margin: auto;
+    /* background-color: #000080;  用于布局的测试代码*/
+    display: flex;
+}
+
+#msg_font_box {
+    flex: 1;
+    height: 450px;
+    /* background-color: aqua;  用于布局的测试代码*/
+    display: flex;
+}
+
+#msg_img_box {
+    flex: 1.3;
+    height: 450px;
+    /* background-color: bisque;   用于布局的测试代码*/
+    display: flex;
+}
+
+.msg_center {
+    margin: auto;
+    width: 80%;
+    height: 80%;
+    /* border-style: solid;   用于布局的测试代码*/
+}
+
+#msg_button {
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* 这个是以下两个按钮共同的样式 */
+.msg_button_00 {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: 500;
+    /*调整字体粗细*/
+    border: 1px solid dodgerblue;   /*设置边框 粗细 颜色*/
+    border-radius: 3px 3px 3px 3px;
+    /* 设置不同角的圆角半径 */
+}
+
+#msg_button_01 {
+    background-color: dodgerblue;
+    color: aliceblue;
+}
+
+#msg_button_02 {
+    margin-left: 15px;
+    background-color: white;
+    color: dodgerblue;
+}
+
+a {
+    text-decoration: none;
+    /* 取消下划线 */
+}
+
+#msg_img {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../img/index/代码管理.webp);
+    background-size: cover;
+    border: 1px solid dodgerblue;   /*设置边框 粗细 颜色*/
+    border-radius: 10px; /* 设置圆角半径为10px */
+        box-shadow: 10px 10px 5px rgb(27, 108, 230); /* 设置阴影效果 */
+        /* 将阴影的水平和垂直偏移量都设置为 10px，这样阴影效果就会偏离元素更远。
+        你可以根据需要调整这些偏移量的值，以实现你想要的效果。 */
+}
+
+/* 项目介绍区 css 结束 */

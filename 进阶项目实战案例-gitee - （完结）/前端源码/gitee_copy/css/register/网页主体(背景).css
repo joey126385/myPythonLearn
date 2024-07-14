@@ -1,0 +1,29 @@
+/* 登录界面网页主体（背景） */
+#box0 {
+    /* 设置flex容器的大小 */
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient( rgba(218, 224, 233, 0.918),white);/*渐变色实现*/
+    height: 100vh;
+    width: 100%;
+    /* 申明当前盒子 为 flex容器 */
+    display: flex;
+}
+
+/* 设置左边图片背景 */
+#background_left{
+    position: absolute;    /*相对浏览器边框定位*/
+    left: 0px;
+    bottom: 0px;    /*距离底部0px*/
+    /* background-image: url("./img/login/login_bg-left.webp"); */
+    z-index: 0; /* 设置z-index值,让该div置于背景层 */
+}
+
+/* 设置右边图片背景 */
+#background_right{
+    position: absolute;    /*相对浏览器边框定位*/
+    right: 0px;
+    bottom: 0px;    /*距离底部0px*/
+    /* background-image: url("./img/login/login_bg-right.webp"); */
+    z-index: 0; /* 设置z-index值,让该div置于背景层 */
+}

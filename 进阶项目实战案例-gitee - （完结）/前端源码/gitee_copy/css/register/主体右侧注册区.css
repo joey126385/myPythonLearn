@@ -1,0 +1,99 @@
+/* 主体区域右侧登录区域 */
+
+#box1_02 {
+    width: 370px;
+    /* background-color: chartreuse; */
+    margin: auto;
+}
+
+#box1_02_title {
+    font-size: 24px;
+    color: #3a485a;
+    font-weight: bold;
+}
+
+#yes_zhagnhao {
+    margin-left: 170px;
+    color: #414242;
+    font-size: 14px
+}
+
+#denglu {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #005980;
+    text-decoration: none;   /*取消超链接标签的下划线*/
+}
+
+/* 输入框区域 */
+.input_box{
+    margin-top: 20px;
+    display: flex;
+} 
+
+/* 登录输入框设置 */
+.register_input {
+    width: 380px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dfe3e9;
+    font-size: 15px;
+}
+
+/* 个人空间地址输入框左侧提示 */
+#personal_space{
+    flex: 1.2;
+    display: flex;
+    background-color: #f4f4f5;
+    border: 1px solid #DEDEDF;
+    border-radius: 3px 0px 0px 3px;
+}
+/* 个人空间地址输入框盒子 */
+#personal_space_inputBox{
+    flex: 1.8;
+}
+
+/* 个人空间地址输入框设置 */
+.personal_space_register_input {
+    width: 97%;
+    height: 40px;
+    border-radius: 0px 3px 3px 0px;
+    border: 1px solid #dfe3e9;
+    font-size: 15px;
+}
+
+/* 输入框提示字体颜色 */
+input::placeholder {
+    color: #dfe3e9;
+  }
+
+.checkbox_msg1 {
+    color: #414242;
+    font-size: 14px;
+}
+.checkbox_msg2 {
+    color: #005980;
+    font-size: 14px;
+    margin: 0px 5px 0px 5px;
+}
+
+
+#register_button {
+    width: 100%;
+    height: 37px;
+    font-size: 19px;
+    background: #fe7300;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    letter-spacing: 5px; /* 设置字体间距为2像素 */
+}
+
+.other_register{
+    flex : 1;
+    display: flex;
+}
+
+.logo{
+    margin: auto;
+}

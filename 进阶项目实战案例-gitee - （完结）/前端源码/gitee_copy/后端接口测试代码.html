@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>axios_快速上手</title>
+
+    <!-- 引入 Vue 包 -->
+    <script src="./js/vue.js"></script>
+    <!-- 引入 axios 包 -->
+    <script src="./js/axios.js"></script>
+</head>
+
+<body>
+    <div id="box">
+        <h1 style="color: crimson;">
+            {{test_value}}
+        </h1>
+        <button @click="test">点我,请求test接口</button>
+    </div>
+
+    <script>
+        new Vue({
+            el : '#box',
+            data : {
+                test_value : null     // 用于接收 请求 test接口 响应的数据
+            },
+            methods : {
+                test(){
+                    axios({
+                        method : 'get',
+                        url : 'http://127.0.0.1:5000/test'
+                    }).then((res)=>{
+                        console.log(res);
+                        this.test_value = res.data
+                    })
+                }
+            }
+        })
+    </script>
+</body>
+</html>

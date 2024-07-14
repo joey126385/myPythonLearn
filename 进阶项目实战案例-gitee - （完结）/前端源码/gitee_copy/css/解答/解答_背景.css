@@ -1,0 +1,21 @@
+/* 背景布局 */
+body{
+    /* background-color: purple; */
+    margin: 0px;  /*通过调整外边距可以改变当前盒子的位置*/
+    padding: 0px;    /*通过调整内边距，可以撑大盒子，改变盒子大小*/
+}
+#bg_box{
+    width: 100%;
+    height: 100vh;
+    /* background-color: cadetblue; */
+    display: flex;
+    justify-content : center ;
+    background: linear-gradient(rgba(59, 130, 246, .5), red);
+}
+
+#bg_box_center{
+    width: 90%;
+    height: 100vh;
+    /* background-color: aqua; */
+    /*margin: 0px auto; 不使用flex,使用盒子属性快速居中*/
+} 

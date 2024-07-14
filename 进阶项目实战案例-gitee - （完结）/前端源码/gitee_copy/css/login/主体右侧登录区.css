@@ -1,0 +1,73 @@
+/* 主体区域右侧登录区域 */
+
+#box1_02 {
+    width: 370px;
+    /* background-color: chartreuse; */
+    margin: auto;
+}
+
+#box1_02_title {
+    font-size: 24px;
+    color: #3a485a;
+    font-weight: bold;
+}
+
+#no_zhagnhao {
+    margin-left: 180px;
+    color: #414242;
+    font-size: 14px
+}
+
+#zhuce {
+    margin-left: 20px;
+    font-size: 14px;
+    color: #005980;
+    text-decoration: none;   /*取消超链接标签的下划线*/
+}
+
+/* 输入框区域 */
+.input_box{
+    margin-top: 20px;
+    display: flex;
+} 
+
+/* 登录输入框设置 */
+.login_input {
+    width: 380px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid #dfe3e9;
+    font-size: 15px;
+}
+
+/* 输入框提示字体颜色 */
+input::placeholder {
+    color: #dfe3e9;
+  }
+
+#checkbox_msg {
+    position: relative;
+    left: 200px;
+    color: #005980;
+    font-size: 14px;
+}
+
+#login_button {
+    width: 100%;
+    height: 37px;
+    font-size: 19px;
+    background: #fe7300;
+    color: white;
+    border-radius: 2px;
+    border: none;
+    letter-spacing: 5px; /* 设置字体间距为2像素 */
+}
+
+.other_login{
+    flex : 1;
+    display: flex;
+}
+
+.logo{
+    margin: auto;
+}
